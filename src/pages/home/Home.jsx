@@ -11,16 +11,14 @@ const Home = () => {
 
   useEffect(() => {
     fetch("https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US")
-      // convert in api data in json file and then indicate the romise
-    .then(res => res.json())
-    // to read the data
+      .then(res => res.json())
       .then(data => setPopularMovies(data.results))
   }, [])
 
   return (
     <>
       <div className="poster">
-      {/* for sliding the banner we use carousel */}
+        {/* for sliding the banner we use carousel */}
         <Carousel
           showThumbs={false}
           autoPlay={true}
@@ -32,7 +30,8 @@ const Home = () => {
             popularMovies.map(movie => (
               <Link style={{ textDecoration: "none", color: "white" }} to={`/movie/${movie.id}`} >
                 <div className="posterImage">
-                  <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} />
+                  <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="movie" />
+                  {/* backdrop_path means movie image and for tmdb we use https://image.tmdb.org/t/p/original */}
                 </div>
                 <div className="posterImage__overlay">
                   <div className="posterImage__title">{movie ? movie.original_title : ""}</div>
@@ -49,7 +48,7 @@ const Home = () => {
             ))
           }
         </Carousel>
-        <MovieList/>
+        <MovieList />
       </div>
     </>
   )
