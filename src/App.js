@@ -8,11 +8,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const App = () => {
   return (
     <Router>
+      {/* navigation start */}
       <Header />
+      {/* navigation end */}
       <Routes>
         <Route>
           <Route path="/" element={<Home/>}></Route>
           <Route path="movie/:id" element={<MovieDetail/>}></Route>
+          {/* movielist indicate category section  */}
           <Route path="movies/:type" element={<MovieList/>}></Route>
           <Route path="/*" element={<h1>error page</h1>}></Route>
         </Route>

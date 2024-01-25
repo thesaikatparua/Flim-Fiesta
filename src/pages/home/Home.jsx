@@ -11,13 +11,16 @@ const Home = () => {
 
   useEffect(() => {
     fetch("https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US")
-      .then(res => res.json())
+      // convert in api data in json file and then indicate the romise
+    .then(res => res.json())
+    // to read the data
       .then(data => setPopularMovies(data.results))
   }, [])
 
   return (
     <>
       <div className="poster">
+      {/* for sliding the banner we use carousel */}
         <Carousel
           showThumbs={false}
           autoPlay={true}
