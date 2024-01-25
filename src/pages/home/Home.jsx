@@ -18,6 +18,7 @@ const Home = () => {
   return (
     <>
       <div className="poster">
+        {/* for sliding the banner we use carousel */}
         <Carousel
           showThumbs={false}
           autoPlay={true}
@@ -29,7 +30,8 @@ const Home = () => {
             popularMovies.map(movie => (
               <Link style={{ textDecoration: "none", color: "white" }} to={`/movie/${movie.id}`} >
                 <div className="posterImage">
-                  <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} />
+                  <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt="movie" />
+                  {/* backdrop_path means movie image and for tmdb we use https://image.tmdb.org/t/p/original */}
                 </div>
                 <div className="posterImage__overlay">
                   <div className="posterImage__title">{movie ? movie.original_title : ""}</div>
@@ -46,7 +48,7 @@ const Home = () => {
             ))
           }
         </Carousel>
-        <MovieList/>
+        <MovieList />
       </div>
     </>
   )
