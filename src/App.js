@@ -18,8 +18,10 @@ const App = () => {
           {/* movielist indicate category section  */}
           <Route path="movies/:type" element={<MovieList/>}></Route>
           <Route path="/*" element={<h1>error page</h1>}></Route>
+          
         </Route>
       </Routes>
+  
     </Router>
   )
 }
