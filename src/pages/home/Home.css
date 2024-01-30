@@ -9,7 +9,7 @@
 }
 
 .posterImage__overlay {
-    position: absolute;
+    position: absolute; 
     padding: 5rem;
     bottom: 0px;
     height: 70%;

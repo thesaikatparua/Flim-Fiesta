@@ -19,7 +19,7 @@ const MovieList = () => {
     const getData = () => {
         fetch(`https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`)
         .then(res => res.json())
-        .then(data => setMovieList(data.results))
+        .then(data => setMovieList(data.results.slice(0,10)))
     }
 
     return (
