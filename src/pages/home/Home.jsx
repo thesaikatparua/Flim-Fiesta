@@ -26,8 +26,8 @@ const Home = () => {
     <div className="poster">
       <Carousel
         showThumbs={false}
-        autoPlay={true}
-        transitionTime={2}
+        // autoPlay={true}
+        // transitionTime={2}
         infiniteLoop={true}
         showStatus={false}
       >
