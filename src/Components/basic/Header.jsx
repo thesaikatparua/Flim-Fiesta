@@ -1,49 +1,36 @@
-import React from 'react';
-import logo from '../../asset/logo real.jpg';
-import './Header.css';
-import {FaSearch} from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import React from "react";
+import logo from "../../asset/logo real.jpg";
+import "./Header.css";
+import { FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
-  // const [input, setInput] = useState("");
+  
   return (
-    <> 
-  <nav className="nav">
-   <img src={logo} alt="" className='logo'/>
-    {/* <Link to="/">Logo</Link> */}
+    <>
+      <nav className="nav">
+        {/* This is logo */}
+        <Link to="/"><img src={logo} alt="logo" className="logo" /></Link>
 
-    <div className="input-wrapper">
-      <FaSearch id="search-icon" />
-      <input placeholder="Search for movie..." /*value={input} onChange={(e) => setInput(e.target.value)}*//>
-      </div>
+        <li>
+            <Link to="/movies/upcoming">Upcoming</Link>
+        </li>
 
-    <div className="menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+        <div className="input-wrapper">
+          <FaSearch id="search-icon" />
+          <input
+            placeholder="Search for movie..." 
+          />
+        </div>
 
-
-    <ul>
-      <li>
-        <Link to="/top_rated">Top Rated</Link>
-      </li>
-      <li>
-        <Link to="/upcoming">Upcoming</Link>
-      </li>
-    </ul>
-  </nav>
-  </>
+        <button>Sign In</button>
+      </nav>
+    </>
   );
 };
 
 export default Header;
-
-
-
-
-
 
 // import React from 'react'
 // import './Header.css';
@@ -66,6 +53,4 @@ export default Header;
 //   )
 // }
 
-// export default Header;   
-
-
+// export default Header;

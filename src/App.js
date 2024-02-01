@@ -11,18 +11,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const App = () => {
   return (
     <Router>
-      <div className="App">
-        <div className="search-bar-container">
-        <Header />
-        </div>
-      </div>
-      {/* <div className="App">
-      <Header />
-      <Routes>
-        <Route path="/top_rated" element={<TopRated />}/>
-        <Route path="/upcoming" element={<Upcoming />}/>
-      </Routes>
-      </div> */}
       {/* navigation start  */}
       <Header />
        {/* navigation end  */}
