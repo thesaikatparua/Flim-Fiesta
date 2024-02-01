@@ -1,5 +1,8 @@
 import React from 'react'
 import Header from './Components/basic/Header';
+
+// import { TopRated } from '../src/pages/toprated';
+// import { Upcoming } from '../src/pages/upcoming';
 import Home from './pages/home/Home'
 import MovieList from './Components/movieList/MovieList';
 import MovieDetail from './pages/movieDetail/MovieDetail'
@@ -8,9 +11,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const App = () => {
   return (
     <Router>
-      {/* navigation start */}
+      {/* navigation start  */}
       <Header />
-      {/* navigation end */}
+       {/* navigation end  */}
       <Routes>
         <Route>
           <Route path="/" element={<Home/>}></Route>
