@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './Home.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import MovieList from '../../Components/movieList/MovieList';
 
 const Home = () => {
     const [popularMovies, setPopularMovies] = useState([]);
@@ -24,10 +25,8 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="poster">
-            {error ? (
-                <p>{error}</p>
-            ) : (
+        <>
+            <div className="poster">
                 <Carousel
                     showThumbs={false}
                     autoPlay={true}
@@ -54,8 +53,9 @@ const Home = () => {
                         </Link>
                     ))}
                 </Carousel>
-            )}
-        </div>
+                <MovieList />
+            </div>
+        </>
     );
 }
 
