@@ -6,6 +6,7 @@ background-color: white;
 align-items: center;
 display: flex;
 justify-content: space-between;
+}
 
 .nav{
     height: 8vh;
