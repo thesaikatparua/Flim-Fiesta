@@ -1,13 +1,10 @@
 import React from 'react'
 import Header from './Components/basic/Header';
-
-// import { TopRated } from '../src/pages/toprated';
-// import { Upcoming } from '../src/pages/upcoming';
+import Footer from './Components/footer/Footer';
 import Home from './pages/home/Home'
 import MovieList from './Components/movieList/MovieList';
 import MovieDetail from './pages/movieDetail/MovieDetail'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 const App = () => {
   return (
     <Router>
@@ -22,8 +19,10 @@ const App = () => {
           {/* movielist indicate category section  */}
           <Route path="movies/:type" element={<MovieList/>}></Route>
           <Route path="/*" element={<h1>error page</h1>}></Route>
+          
         </Route>
       </Routes>
+  <Footer />
     </Router>
   )
 }
