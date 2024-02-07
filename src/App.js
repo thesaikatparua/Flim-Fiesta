@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from './Components/basic/Header';
+import Footer from './Components/footer/Footer';
 import Home from './pages/home/Home'
 import MovieList from './Components/movieList/MovieList';
 import MovieDetail from './pages/movieDetail/MovieDetail'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 const App = () => {
   return (
     <Router>
@@ -21,7 +21,7 @@ const App = () => {
           
         </Route>
       </Routes>
-  
+  <Footer />
     </Router>
   )
 }
