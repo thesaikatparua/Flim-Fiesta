@@ -50,7 +50,9 @@ const Movie = () => {
                             }
                         </div>
                     </div>
+                    
                     <div className="movie__detailRightBottom">
+                        {/* new div create kore button */}
                         <div className="synopsisText">Synopsis</div>
                         <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div>
                     </div>
