@@ -55,6 +55,7 @@ const Movie = () => {
                         {/* new div create kore button */}
                         <div className="synopsisText">Synopsis</div>
                         <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div>
+                        
                     </div>
                     
                 </div>
