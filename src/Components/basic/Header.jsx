@@ -1,3 +1,37 @@
+// import React from "react";
+// import logo from "../../asset/logo real.jpg";
+// import "./Header.css";
+// import { FaSearch } from "react-icons/fa";
+// import { Link } from "react-router-dom";
+
+
+// const Header = () => {
+  
+//   return (
+//     <>
+//       <nav className="nav">
+//         {/* This is logo */}
+//         <Link to="/"><img src={logo} alt="logo" className="logo" /></Link>
+
+//         <li>
+//             <Link to="/movies/upcoming">Upcoming</Link>
+//         </li>
+
+//         <div className="input-wrapper">
+//           <FaSearch id="search-icon" />
+//           <input
+//             placeholder="Search for movie..." 
+//           />
+//         </div>
+
+//         <button>Sign In</button>
+//       </nav>
+//     </>
+//   );
+// };
+
+// export default Header;
+
 import React from 'react'
 import './Header.css';
 import { Link } from 'react-router-dom';
@@ -19,4 +53,4 @@ const Header = () => {
   )
 }
 
-export default Header;   
+export default Header;

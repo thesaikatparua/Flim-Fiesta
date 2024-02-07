@@ -8,9 +8,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const App = () => {
   return (
     <Router>
-      {/* navigation start */}
+      {/* navigation start  */}
       <Header />
-      {/* navigation end */}
+       {/* navigation end  */}
       <Routes>
         <Route>
           <Route path="/" element={<Home/>}></Route>
