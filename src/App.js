@@ -11,6 +11,7 @@ const App = () => {
       {/* navigation start  */}
       <Header />
        {/* navigation end  */}
+       
       <Routes>
         <Route>
           <Route path="/" element={<Home/>}></Route>
