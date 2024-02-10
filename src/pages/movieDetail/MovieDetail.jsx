@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react"
 import "./MovieDetail.css"
 import { useParams } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Movie = () => {
     const [currentMovieDetail, setMovie] = useState()
@@ -20,7 +21,7 @@ const Movie = () => {
     return (
         <div className="movie">
             <div className="movie__intro">
-                <img className="movie__backdrop" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} />
+                   <img className="movie__backdrop" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} />
             </div>
             <div className="movie__detail">
                 <div className="movie__detailLeft">
@@ -52,10 +53,11 @@ const Movie = () => {
                     </div>
                     
                     <div className="movie__detailRightBottom">
-                        {/* new div create kore button */}
                         <div className="synopsisText">Synopsis</div>
-                        <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div>
-                        
+                        <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div> 
+                        <div className="button-container">
+                        <Link style={{ textDecoration: "none" }}><p>Book tickets</p></Link>
+                        </div>
                     </div>
                     
                 </div>
