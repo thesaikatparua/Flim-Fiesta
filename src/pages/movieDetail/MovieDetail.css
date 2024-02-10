@@ -8,14 +8,25 @@
 
 .movie__intro {
     width: 80%;
+    
 }
+
 
 .movie__backdrop {
     width: 100%;
     height: 500px;
     object-fit:cover;
     object-position: 0 35%;
+    
 }
+/* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  } */
 
 .movie__detail {
     align-items: center;
@@ -73,6 +84,25 @@
 .movie__detailRightBottom {
     margin: 2rem 0;
     flex: 0.8;
+}
+
+.button-container{
+    width: 20vh;
+    height: 7vh;
+    border-radius: 10px;
+    background-color: rgba(255, 87, 87, 100);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.button-container p{
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    left: 1.6rem;
+    top: -0.4rem;
+    font-size: 19px;
 }
 
 .synopsisText {

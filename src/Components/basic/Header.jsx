@@ -1,5 +1,5 @@
 
-import React from "react";
+import React from "react"; // { useState } 
 import logo from "../../assets/logo real.jpg"
 import "./Header.css";
 import { FaSearch } from "react-icons/fa";
@@ -8,11 +8,17 @@ import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = () => {
+  // Edited Navbar
+  // const {active,setActive} = useState(false)//true
+  // Edited Navbar
   const { isAuthenticated, loginWithRedirect, logout} = useAuth0();
 
   return (
    <>
-   <nav>
+    {/* Edited Navbar
+   <div className={active ? "navbar active" : "navbar"}>
+    Edited Navbar */}
+    <nav>
       <Link className="logo" to="/" style={{ textDecoration: "none" }}><img src={logo} alt="logo" className="logo" />
       </Link>
       
@@ -46,7 +52,9 @@ const Header = () => {
         </Link>
 
     </div>
-   </nav>
+    </nav>
+    {/* </div>
+    Edited Navbar's changed from nav to div  */}
    </>
   );
 };
