@@ -1,47 +1,47 @@
 import React from "react";
 import "./Footer.css";
-import { FaFacebookF } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+// import { FaFacebookF } from "react-icons/fa";
+// import { FaYoutube } from "react-icons/fa";
+// import { FaInstagram } from "react-icons/fa";
+import {Link} from "react-router-dom";
+import logo from '../../assets/logo.png';
+
 function Footer() {
   return (
-    <div className="main-footer">
-      <div className="container">
-        <div className="row">
-          {/* Column1 */}
-          <div className="col">
-            <h1>Movies Now Showing</h1>
-            <h5>
-              The Marvles | Wonka | Migration | Aquaman and the lost kingdom
-            </h5>
-            <h1>Movies Now Showing In Kolkata</h1>
-            <h5>Fighter | Dunki | Animal | Pradhan</h5>
-            <h1 className="list-unstyled">
-              <h4>Help</h4>
-            </h1>
-          </div>
+    <footer>
+      <div className="row">
+        <div className="col">
+            <img src={logo} alt="logo" className="logo" />
+            <h4>Lorem ipsum dolor sit amet consectetur<br/> adipisicing elit. Sapiente inventore amet <br/>perspiciatis dolorum rem nesciunt. Nisi<br/> magnam cupiditate, praesentium explicabo.</h4>
 
-          {/* Column3 */}
-          <div className="footer-social">
-            <ui className="footer-social--icons">
-              <div>
-                <FaFacebookF className="icons" />
-              </div>
-
-              <div>
-                <FaYoutube className="icons" />
-              </div>
-
-              <div>
-                <FaInstagram className="icons" />
-              </div>
-            </ui>
-          </div>
         </div>
-      </div>
-      <hr />
-      <div className="row"></div>
-    </div>
+        <div className="col">
+          <h3>office</h3>
+          <p>Kalyani, Nadia</p>
+          <p>West Bengal, PIN:721435, India</p>
+          <p className="email-id">filmfiesta@gamil.com</p>
+          <h4>+91 - 0123456789</h4>
+        </div>
+        <div className="col">
+          <h3>Links</h3>
+          <ul>
+            <li><Link to="/" ><p>Home</p></Link></li>
+            <li><Link><p>About Us</p></Link></li>
+            <li><Link><p>Upcoming</p></Link></li>
+            <li><Link><p>Private Policy</p></Link></li>
+            <li><Link><p>Contact us</p></Link></li>
+          </ul>
+        </div>
+        <div className="col">
+          <h3>Newsletter</h3>
+          <form>
+          <i class="fa-regular fa-envelope"></i>
+            <input type='email' placeholder='Enter your email id' required/>
+            <buttom  type="submit"><i class="fa-solid fa-arrow-right"></i></buttom>
+          </form>
+        </div>
+        </div>
+    </footer>
   );
 }
 
