@@ -1,9 +1,9 @@
-/* *{
+*{
   margin:0px;
   padding:0px;
   box-sizing: border-box;
-} */
-
-html,body,#root,.App{
-    min-height: 100%;
 }
+
+/* html,body,#root,.App{
+    min-height: 100%;
+} */
