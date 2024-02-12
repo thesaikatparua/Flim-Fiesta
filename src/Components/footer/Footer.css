@@ -30,15 +30,16 @@ footer{
 .col p{
   font-size:1rem;
 }
-.logo{
-  width:200px;
-  height:100px;
+.hero-logo{
+  width:150px;
+  height:50px;
   margin-bottom: 20px;
 }
-.col h3{
+.col h2{
   width:fit-content;
   margin-bottom: 40px;
   position:relative;
+  
 }
 
 .email-id{

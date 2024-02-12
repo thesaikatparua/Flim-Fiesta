@@ -11,19 +11,19 @@ function Footer() {
     <footer>
       <div className="row">
         <div className="col">
-            <img src={logo} alt="logo" className="logo" />
+            <Link to="/"><img src={logo} alt="logo" className="hero-logo" /></Link>
             <h4>Lorem ipsum dolor sit amet consectetur<br/> adipisicing elit. Sapiente inventore amet <br/>perspiciatis dolorum rem nesciunt. Nisi<br/> magnam cupiditate, praesentium explicabo.</h4>
 
         </div>
         <div className="col">
-          <h3>office</h3>
+          <h2>Office</h2>
           <p>Kalyani, Nadia</p>
           <p>West Bengal, PIN:721435, India</p>
           <p className="email-id">filmfiesta@gamil.com</p>
           <h4>+91 - 0123456789</h4>
         </div>
         <div className="col">
-          <h3>Links</h3>
+          <h2>Links</h2>
           <ul>
             <li><Link to="/" ><p>Home</p></Link></li>
             <li><Link><p>About Us</p></Link></li>
@@ -33,7 +33,7 @@ function Footer() {
           </ul>
         </div>
         <div className="col">
-          <h3>Newsletter</h3>
+          <h2>Newsletter</h2>
           <form>
           <i class="fa-regular fa-envelope"></i>
             <input type='email' placeholder='Enter your email id' required/>
