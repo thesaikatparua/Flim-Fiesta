@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = () => {
-
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
   return (
@@ -27,14 +26,16 @@ const Header = () => {
         </div>
 
         <div className="navright">
-          <div className="input-wrapper">
-            <FaSearch id="search-icon"  />
-            <input placeholder="Search for movie..." />
-          </div>
+          <Link to="movie/search" style={{ textDecoration: "none",color:"black"}}>
+            <div className="input-wrapper">
+              <FaSearch id="search-icon" />
+              <p>Search here...</p>
+            </div>
+          </Link>
 
           <div className="location">
             <Link to="#" style={{ textDecoration: "none" }}>
-              <FaLocationDot id="location-icon" style={{color:"#000"}} />
+              <FaLocationDot id="location-icon" style={{ color: "#000" }} />
             </Link>
           </div>
 
@@ -50,7 +51,9 @@ const Header = () => {
               </button>
             ) : (
               //for login
-              <button onClick={() => loginWithRedirect()}><p>Sign In</p></button>
+              <button onClick={() => loginWithRedirect()}>
+                <p>Sign In</p>
+              </button>
             )}
           </Link>
         </div>
@@ -60,4 +63,3 @@ const Header = () => {
 };
 
 export default Header;
-

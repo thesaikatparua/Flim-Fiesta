@@ -58,8 +58,10 @@ nav{
     background-color:snow;
     padding:0.5rem;
     margin-left: 3rem;
+    width:700px;
+    cursor: pointer;
 } 
-input{
+/* input{
     outline: none;
     border: none;
     padding:0.2rem 0;
@@ -69,7 +71,7 @@ input{
     margin-left:0.5rem;
     font-family: 'DM Sans', sans-serif;
     background-color:snow;
-} 
+}  */
 
 
 #search-icon{
@@ -77,10 +79,14 @@ input{
     color:#7d7a7a;
 }
 
+.navright p{
+    font-family: 'DM Sans', sans-serif;
+    margin-left:1rem;
+}
 
 .location{
     font-size:1.5rem;
-    margin-left:5rem;
+    margin-left:rem;
 }
 
 

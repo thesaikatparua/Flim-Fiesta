@@ -19,7 +19,7 @@ function Footer() {
           <h2>Office</h2>
           <p>Kalyani, Nadia</p>
           <p>West Bengal, PIN:721435, India</p>
-          <p className="email-id">filmfiesta@gamil.com</p>
+          <p className="email-id">filmfiesta@gmail.com</p>
           <h4>+91 - 0123456789</h4>
         </div>
         <div className="col">
