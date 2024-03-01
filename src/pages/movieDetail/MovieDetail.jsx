@@ -56,7 +56,7 @@ const Movie = () => {
                         <div className="synopsisText">Synopsis</div>
                         <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div> 
                         <div className="button-container">
-                        <Link to="/booking/:id" style={{ textDecoration: "none" }}><p>Book tickets</p></Link>
+                        <Link  style={{ textDecoration: "none" }}><p>Book tickets</p></Link>
                         </div>
                     </div>
                     

@@ -5,7 +5,7 @@ import Footer from './Components/footer/Footer'
 import MovieList from './Components/movieList/MovieList';
 import Search from './Components/search/Search'
 import MovieDetail from './pages/movieDetail/MovieDetail'
-import Booking from './pages/booking/Book';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
     <Router>
       {/* navigation start  */}
       <Header/>
-      {/* {Home?null:<Header/>} */}
+      {/* {Home?<Header/>:null} */}
        {/* navigation end  */}
       <Routes>
         <Route>
@@ -21,12 +21,13 @@ const App = () => {
           <Route path="movie/:id" element={<MovieDetail/>}></Route>
           {/* movielist indicate category section  */}
           <Route path="movie/search" element={<Search/>}></Route>
-          <Route path="booking/:id" element={<Booking/>}></Route>
+          
           <Route path="movies/:type" element={<MovieList/>}></Route>
           <Route path="/*" element={<h1>error page</h1>}></Route>
         </Route>
       </Routes>
-     <Footer/>
+      <Footer/>
+      {/* {Footer?<Footer/>:null} */}
     </Router>
   )
 }
