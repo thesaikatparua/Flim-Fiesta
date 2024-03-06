@@ -13,73 +13,15 @@
     height:100vh;
     background-color:rgb(255, 0, 0);
     position: relative;
-    
 }
 
 .trailer img{
     width:100%;
     height:80vh;
     position: absolute;
-    top:4rem;
+    top:4.5rem;
     left:4rem;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.86) 0px 22px 40px 6px;
 }
 
-.moviebook_right{
-    width:45%;
-    height:100vh;
-    background-color:rgb(251, 250, 245);
-    position: relative;
-}
-
-.booking{
-     position: absolute;
-     top:12rem;
-     left:8rem;
-}
-
-.title{
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: normal;
-    font-size: 2.5rem;
-    margin-left: 5rem;
-}
-
-.movie__info{
-   display:flex;
-   align-items: center;
-   justify-content: space-between;
-   flex-direction: column;
-   margin-top:2rem;
-
-}
-
-input{
-    outline:none;
-    border:1px solid black;
-    border-radius: 10px;
-    margin-top:1.5rem;
-    padding:1rem 8rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1rem;
-}
-
-button{
-    position: absolute;
-    top:22rem;
-    left:22rem;
-    padding:0.5rem 2rem;
-    border-radius: 10px;
-    background-color:rgb(255, 0, 0);
-    border: none;
-    outline:none;
-}
-
-button p{
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
