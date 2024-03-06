@@ -21,12 +21,12 @@ const Movie = () => {
     return (
         <div className="movie">
             <div className="movie__intro">
-                   <img className="movie__backdrop" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} />
+                   <img className="movie__backdrop" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} alt="movie poster"/>
             </div>
             <div className="movie__detail">
                 <div className="movie__detailLeft">
                     <div className="movie__posterBox">
-                        <img className="movie__poster" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.poster_path : ""}`} />
+                        <img className="movie__poster" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.poster_path : ""}`} alt="movie poster" />
                     </div>
                 </div>
                 <div className="movie__detailRight">
@@ -56,7 +56,7 @@ const Movie = () => {
                         <div className="synopsisText">Synopsis</div>
                         <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div> 
                         <div className="button-container">
-                        <Link  style={{ textDecoration: "none" }}><p>Book tickets</p></Link>
+                        <Link  to={`/movie/${id}/booking`}  target="_blank" style={{ textDecoration: "none" , "cursor":"pointer"}}><p>Book tickets</p></Link>
                         </div>
                     </div>
                     
@@ -80,7 +80,7 @@ const Movie = () => {
                                 company.logo_path 
                                 && 
                                 <span className="productionCompanyImage">
-                                    <img className="movie__productionComapany" src={"https://image.tmdb.org/t/p/original" + company.logo_path} />
+                                    <img className="movie__productionComapany" src={"https://image.tmdb.org/t/p/original" + company.logo_path} alt="production name:"/>
                                     <span>{company.name}</span>
                                 </span>
                             }

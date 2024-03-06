@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const Book = () => {
+
   const [booking, setBooking] = useState();
   const { id } = useParams();
 
@@ -19,6 +20,7 @@ const Book = () => {
 }
 
   return (
+    
     <>
       <div className="movie_book">
         <div className="moviebook_left">
@@ -28,7 +30,9 @@ const Book = () => {
               src={`https://image.tmdb.org/t/p/original${booking? booking.poster_path  : ""}`} alt="movie trailer"/>
           </div>
         </div>
-        <div className="moviebook_right"></div>
+        <div className="moviebook_right">
+        <Link  to={`/movie/${id}/booking/hall`}  style={{ textDecoration: "none" , "cursor":"pointer"}}><p>proceed</p></Link>
+        </div>
       </div>
     </>
   );
