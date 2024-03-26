@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import "./Book.css";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import Pagination from "./ticket"; // Import BasicPagination component
 
 const Book = () => {
 
@@ -31,8 +31,9 @@ const Book = () => {
           </div>
         </div>
         <div className="moviebook_right">
-        <Link  to={`/movie/${id}/booking/hall`}  style={{ textDecoration: "none" , "cursor":"pointer"}}><p>proceed</p></Link>
-        </div>
+        {/* <Link  to={`/movie/${id}/booking/hall`}  style={{ textDecoration: "none" , "cursor":"pointer"}}><p>proceed</p></Link> */}
+        <Pagination movieId={id}/>
+       </div>
       </div>
     </>
   );
