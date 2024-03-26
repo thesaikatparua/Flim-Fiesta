@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+.seat-booking {
+  text-align: center;
+  padding: 20px;
+  position:relative;
+}
+
+.movie-container {
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.status {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding:0 10rem;
+}
+
+.item {
+  font-size: 14px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -14px;
+  transform: translate(0, -50%);
+  width: 10px;
+  height: 10px;
+  background: rgb(240, 223, 223);
+  outline: 1px solid rgb(120, 120, 120);
+  border-radius: 1px;
+}
+
+.item:nth-child(2)::before {
+  background: rgb(62, 60, 60);
+  outline: none;
+}
+
+.item:nth-child(3)::before {
+  background: rgb(246, 73, 73);
+  outline: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  width: 60%;
+}
+
+.seat {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(240, 223, 223);
+  margin: 3px;
+  cursor: pointer;
+}
+
+.seat.occupied {
+  background-color: rgb(62, 60, 60);
+}
+
+.seat.selected {
+  background-color: rgb(246, 73, 73);
+}
+
+.screen {
+  width: 65%;
+  height: 8px;
+  background-color: rgb(255, 0, 0);
+  margin: 20px 0;
+}
+
+.text {
+  font-size: 18px;
+  position: absolute;
+  top:38rem;
+  left:8rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.book {
+  position: absolute;
+  top:37rem;
+  left:36rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  background-color: rgb(255, 0, 0);
+  padding:0.5rem 2.5rem;
+  border-radius:10px;
+  font-size: 18px;
+}
