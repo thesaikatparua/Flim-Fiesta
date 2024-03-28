@@ -13,7 +13,6 @@ function Footer() {
         <div className="col">
             <Link to="/"><img src={logo} alt="logo" className="hero-logo" /></Link>
             <h4>Lorem ipsum dolor sit amet consectetur<br/> adipisicing elit. Sapiente inventore amet <br/>perspiciatis dolorum rem nesciunt. Nisi<br/> magnam cupiditate, praesentium explicabo.</h4>
-
         </div>
         <div className="col">
           <h2>Office</h2>

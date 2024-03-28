@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import "./Book.css";
 import { useParams } from "react-router-dom";
-import Pagination from "./ticket"; // Import BasicPagination component
+import Pagination from "./ticket"; 
 
 const Book = () => {
 
