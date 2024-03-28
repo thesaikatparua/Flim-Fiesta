@@ -6,7 +6,7 @@ import MovieList from './Components/movieList/MovieList';
 import Search from './Components/search/Search'
 import MovieDetail from './pages/movieDetail/MovieDetail';
 import Booking from './pages/booking/Book';
-import Hall from './pages/cinemahall/CinemaHall';
+import Hall from './pages/cinemahall/cinema';
 
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -32,8 +32,8 @@ const App = () => {
           {/* movielist indicate category section  */}
           <Route path="movies/:type" element={<MovieList />}></Route>
           <Route path="movie/search" element={<Search/>}></Route>
-          <Route path="/movie/:id/booking" element={<Booking/>}></Route>
-          <Route path="/movie/:id/booking/hall" element={<Hall/>}></Route>
+          <Route path="/movie/:id/booking" element={<Hall/>}></Route>
+          <Route path="/movie/:id/booking/ticket" element={<Booking/>}></Route>
           <Route path="/*" element={<h1>error page</h1>}></Route>
         </Route>
       </Routes>
