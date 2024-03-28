@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "hall": "Sangam Multiplex",
+        "address": "Block F Plot No. 53 to 56, near Railway Station, Kalyani, West Bengal 741250",
+        "show1": "9.30 AM",
+        "show2": "12.30 PM",
+        "show3": "9.00 PM",
+        "Location": "https://maps.app.goo.gl/DLPGgez89p2YzcBT6"
+    },
+    {
+        "id": 2,
+        "hall": "Atindra Multiplex",
+        "address": "91, Ghoshpara Rd, Das Bari, Airport Area Barrackpore, Barrackpore, West Bengal 700120",
+        "show1": "10.00 AM",
+        "show2": "2.00 PM",
+        "show3": "7.00 PM",
+        "Location": "https://maps.app.goo.gl/SCzVwW7yKZGvkuYF9"
+    },
+    {
+        "id": 3,
+        "hall": "PVR",
+        "address": "32, Jagat Banerjee Ghat Rd, Choura Bustee, Shibpur, Howrah, West Bengal 711102",
+        "show1": "11.00 AM",
+        "show2": "3.00 PM",
+        "show3": "10.00 PM",
+        "Location": "https://maps.app.goo.gl/Z1r9Ryw3nMAGa9ot7"
+    },
+    {
+        "id": 4,
+        "hall": "Dolphin Multiplex",
+        "address": "Rina Road Block A 8, Block A9, Block A, Kalyani, West Bengal 741249",
+        "show1": "9.00 AM",
+        "show2": "11.00 AM",
+        "show3": "4.00 PM",
+        "Location": "https://maps.app.goo.gl/qFn4wyqh1nnmnpM99"
+    },
+    {
+        "id": 5,
+        "hall": "INOX",
+        "address": "2nd Floor, South City Mall, 375, Prince Anwar Shah Rd, South City Complex, Kolkata, West Bengal 700068",
+        "show1": "9.00 AM",
+        "show2": "6.00 PM",
+        "show3": "9.00 PM",
+        "Location": "https://maps.app.goo.gl/wh52Jmg79CZjZeGx6"
+    },
+    {
+        "id": 6,
+        "hall": "RDB Cinemas",
+        "address": "Plot K And GP 1, Street Number 25, EP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091",
+        "show1": "3.00 PM",
+        "show2": "6.00 PM",
+        "show3": "8.00 PM",
+        "Location": "https://maps.app.goo.gl/LhQWRUphjWjZMyaQA"
+    }
+]
