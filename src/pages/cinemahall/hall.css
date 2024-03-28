@@ -1,0 +1,42 @@
+.hall{
+    background-color: snow;
+    width:94%;
+    height:12vh;
+    border-radius:20px;
+    margin-left:3rem;
+    margin-top: 1rem;
+    display: flex;
+}
+
+.hall-left{
+   padding:1rem 2rem 1rem 4rem;
+   flex-basis:50%;
+ 
+}
+
+.hall-left p{
+   font-size:12px;
+}
+
+.time-table{
+    flex-basis:30%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:0 2rem;
+}
+
+.time{
+    padding:0.5rem;
+    border-radius:5px;
+    border:1.8px solid rgb(241, 70, 70);
+    color:black;
+}
+
+.hall-right{
+    flex-basis:20%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:2rem 5rem; 
+}

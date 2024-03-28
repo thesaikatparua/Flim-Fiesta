@@ -26,7 +26,7 @@ const Movie = () => {
             <div className="movie__detail">
                 <div className="movie__detailLeft">
                     <div className="movie__posterBox">
-                        <img className="movie__poster" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.poster_path : ""}`} alt="movie poster" />
+                    <img className="movie__poster" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.poster_path : ""}`} alt="movie poster" />
                     </div>
                 </div>
                 <div className="movie__detailRight">
