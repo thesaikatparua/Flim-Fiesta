@@ -2,10 +2,17 @@ import React, {useEffect, useState} from "react"
 import "./MovieDetail.css"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom";
+import Calendar from "react-calendar";
 
 const Movie = () => {
     const [currentMovieDetail, setMovie] = useState()
     const { id } = useParams()
+    //cal
+    const [ date, setDate ] = useState(new Date());
+
+    const onChange = date => {
+        setDate(date);
+    }
 
     useEffect(() => {
         getData()
@@ -56,7 +63,10 @@ const Movie = () => {
                         <div className="synopsisText">Synopsis</div>
                         <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div> 
                         <div className="button-container">
-                        <Link style={{ textDecoration: "none" }}><p>Book tickets</p></Link>
+                        <Link to="/movies/button-container"style={{ textDecoration: "none" }}><p>Book tickets</p></Link>
+                            <div>
+                            <Calendar onChange={onChange} value={date} />
+                            </div>
                         </div>
                     </div>
                     

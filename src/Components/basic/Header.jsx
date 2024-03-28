@@ -3,12 +3,16 @@ import logo from "../../assets/logo.png";
 import "./Header.css";
 import { FaSearch } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+// import { FaUserLarge } from "react-icons/fa6";
+// import { MdEmail } from "react-icons/md";
+// import { RiLockPasswordFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = () => {
 
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  // const [action,setAction] = useState("Sign Up");
+  // const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
   return (
     <>
@@ -38,21 +42,11 @@ const Header = () => {
             </Link>
           </div>
 
-          <Link to="#" style={{ textDecoration: "none" }}>
-            {isAuthenticated ? (
-              // for logout
-              <button
-                onClick={() =>
-                  logout({ logoutParams: { returnTo: window.location.origin } })
-                }
-              >
-                Sign Out
-              </button>
-            ) : (
-              //for login
-              <button onClick={() => loginWithRedirect()}><p>Sign In</p></button>
-            )}
-          </Link>
+          <div className="signIn">
+            <Link to="/movies/login" style={{ textDecoration: "none" }}>
+              <button>Sign In</button>
+            </Link>
+          </div>
         </div>
       </nav>
     </>

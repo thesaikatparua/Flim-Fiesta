@@ -83,7 +83,7 @@ input{
     margin-left:5rem;
 }
 
-
+/* 
 button {
     padding:0.5rem 2rem;
     border-radius: 10px;
@@ -101,4 +101,117 @@ button p{
 button:hover{
     background:rgb(145, 145, 147);
     cursor: pointer;
+} */
+
+.signIn{
+    /* background-color:#F0F0F0; */
+    padding:0.5rem 2rem;
+    border-radius: 10px;
+    background-color: snow;
 }
+
+.signIn button{
+    color:#000;
+    font-size:1rem;
+    font-family: 'DM Sans', sans-serif;
+ }
+ 
+ .navright .signIn:hover{
+    background:rgb(145, 145, 147);
+    cursor: pointer;
+ }
+
+/* p */
+/*.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 200px;
+    width: 600px;
+    padding-bottom: 30px;
+    background: white;
+}  
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.text{
+    color: #ff5757;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.underline{
+    width: 61px;
+    height: 6px;
+    background: #ff5757;
+    border-radius: 9px;
+}
+
+.inputs{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.inputt{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background: white;
+    border-radius: 6px;
+    margin: 0px 30px;
+
+}
+
+.inputt input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #7d7a7a;
+    font-size: 19px;
+
+}
+
+.forgot-password{
+    padding-top: 62px;
+    margin-top: 27px;
+    color: #7d7a7a;
+    font-size: 18px;
+}
+.forgot-password span{
+    color: #ff5757;
+    cursor: pointer;
+}
+.submit-container{
+    display: flex;
+    gap: 30px;
+    margin: 60px auto;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #F0F0F0;
+    background: #ff5757;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+ 
+.gray{
+    background: #F0F0F0;
+    color: #7d7a7a;
+}*/
