@@ -16,7 +16,7 @@ const CinemaHall = () => {
 
   const getData = () => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`
+      `https://api.themoviedb.org/3/movie/${id}?api_key=b935b5ca8bde9733059fef48810c9af7&language=en-US`
     )
       .then((res) => res.json())
       .then((data) => setPoster(data));
