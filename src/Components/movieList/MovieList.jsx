@@ -9,7 +9,7 @@ const fetchMovieList = async (type) => {
     `https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=b935b5ca8bde9733059fef48810c9af7&language=en-US`
   );
   const data = await response.json();
-  return data.results.slice(0, 10);
+  return data.results.slice(0,18);
 };
 
 const MovieList = () => {

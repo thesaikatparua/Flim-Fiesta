@@ -30,7 +30,7 @@ const Home = () => {
                     infiniteLoop={true}
                     showStatus={false}
                 >
-                    {popularMovies.results.map(movie => (
+                    {popularMovies.results.slice(0,5).map(movie => (
                         <Link key={movie.id} style={{ textDecoration: "none", color: "snow" }} to={`/movie/${movie.id}`}>
                             <div className="posterImage">
                                 <img src={`https://image.tmdb.org/t/p/original${movie?.backdrop_path || ''}`} alt={movie?.original_title || ''} />
