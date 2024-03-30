@@ -1,24 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ticket.css";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
+import { useQuery } from "react-query";
 
-const SeatBooking = ({ movieId }) => {
+const SeatBooking = () => {
   const [selectedSeats, setSelectedSeats] = useState([]);
-  const [ticketPrice, setTicketPrice] = useState(100);
+  const [ticketPrice] = useState(100);
 
-  useEffect(() => {
-    const storedSelectedSeats = JSON.parse(
-      localStorage.getItem("selectedSeats")
-    );
-    if (storedSelectedSeats) {
-      setSelectedSeats(storedSelectedSeats);
+  const { id } = useParams();
+
+  const { data: ticket, isLoading, isError } = useQuery(
+    ["movie", id],
+    async () => {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
     }
-  }, []);
+  );
 
-  useEffect(() => {
-    localStorage.setItem("selectedSeats", JSON.stringify(selectedSeats));
-  }, [selectedSeats]);
+  if (isLoading) return <div>Loading...</div>;
+  if (isError) return <div>Error fetching data</div>;
 
   const handleSeatClick = (seatIndex) => {
     setSelectedSeats((prevSelectedSeats) => {
@@ -46,22 +52,6 @@ const SeatBooking = ({ movieId }) => {
     return getTotalPrice() + convFee() + gst();
   };
 
-  const [ticket, setTicket] = useState();
-  const { id } = useParams();
-
-  useEffect(() => {
-    getData();
-    window.scrollTo(0, 0);
-  }, []);
-
-  const getData = () => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`
-    )
-      .then((res) => res.json())
-      .then((data) => setTicket(data));
-  };
-
   return (
     <>
       <div className="ticket-booking">
@@ -71,10 +61,10 @@ const SeatBooking = ({ movieId }) => {
             <h2>This is Show Time</h2>
           </div>
 
-          <div class="status">
-            <div class="item">Available</div>
-            <div class="item">Booked</div>
-            <div class="item">Selected</div>
+          <div className="status">
+            <div className="item">Available</div>
+            <div className="item">Booked</div>
+            <div className="item">Selected</div>
           </div>
 
           <div className="container">
@@ -131,7 +121,7 @@ const SeatBooking = ({ movieId }) => {
               </div>
               <div id="summary">
                 <div className="movie__rating">
-                  {ticket ? ticket.vote_average : ""} <i class="fas fa-star" />
+                  {ticket ? ticket.vote_average : ""} <i className="fas fa-star" />
                   <span className="movie__voteCount">
                     {ticket ? "(" + ticket.vote_count + ") votes" : ""}
                   </span>

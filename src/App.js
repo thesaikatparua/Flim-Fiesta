@@ -1,47 +1,38 @@
-import React from 'react'
+import React from 'react';
 import Header from './Components/basic/Header';
 import Home from './pages/home/Home';
-import Footer from './Components/footer/Footer'
+import Footer from './Components/footer/Footer';
 import MovieList from './Components/movieList/MovieList';
-import Search from './Components/search/Search'
+import Search from './Components/search/Search';
 import MovieDetail from './pages/movieDetail/MovieDetail';
 import Booking from './pages/booking/Book';
 import Hall from './pages/cinemahall/cinema';
-
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 const App = () => {
+  const url = window.location.href;
+  const bookingUrlFlag = url.includes('booking');
 
-  const url=window.location.href;
-  const bookingUrlFlag=url.includes('booking');
-// console.log(bookingUrlFlag);
   return (
-    
-    <Router>
-    {!bookingUrlFlag?<Header/>:null}
-    {/* {Booking?null:<Header/>} */}
-      {/* navigation start  */}
-      {/* <Header/> */}
-      {/* {Home?null:<Header/>} */}
-       {/* navigation end  */}
-      <Routes>
-        <Route>
-          <Route path="/" element={<Home/>}></Route>
-          <Route path="movie/:id" element={<MovieDetail/>}></Route>
-          {/* movielist indicate category section  */}
-          <Route path="movies/:type" element={<MovieList />}></Route>
-          <Route path="movie/search" element={<Search/>}></Route>
-          <Route path="/movie/:id/booking" element={<Hall/>}></Route>
-          <Route path="/movie/:id/booking/ticket" element={<Booking/>}></Route>
-          <Route path="/*" element={<h1>error page</h1>}></Route>
-        </Route>
-      </Routes>
-      {/* <Footer/> */}
-      {/* {Footer?<Footer/>:null} */}
-      {!bookingUrlFlag?<Footer/>:null}
-    </Router>
-  )
-}
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        {!bookingUrlFlag ? <Header /> : null}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="movie/:id" element={<MovieDetail />} />
+          <Route path="movies/:type" element={<MovieList />} />
+          <Route path="movie/search" element={<Search />} />
+          <Route path="/movie/:id/booking" element={<Hall />} />
+          <Route path="/movie/:id/booking/ticket" element={<Booking />} />
+          <Route path="/*" element={<h1>error page</h1>} />
+        </Routes>
+        {!bookingUrlFlag ? <Footer /> : null}
+      </Router>
+    </QueryClientProvider>
+  );
+};
 
-export default App
+export default App;
