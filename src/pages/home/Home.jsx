@@ -1,28 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useQuery } from 'react-query';
 import { Link } from "react-router-dom";
 import './Home.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import MovieList from '../../Components/movieList/MovieList';
 
+const fetchPopularMovies = async () => {
+    const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=b935b5ca8bde9733059fef48810c9af7&language=en-US");
+    if (!response.ok) {
+        throw new Error('Failed to fetch popular movies');
+    }
+    return response.json();
+};
+
 const Home = () => {
-    const [popularMovies, setPopularMovies] = useState([]);
-    const [error, setError] = useState(null);
+    const { data: popularMovies, error, isLoading } = useQuery('popularMovies', fetchPopularMovies);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=b935b5ca8bde9733059fef48810c9af7&language=en-US");
-                const data = await response.json();
-                setPopularMovies(data.results);
-            } catch (error) {
-                console.error('Error fetching data:', error.message);
-                setError('Error fetching data. Please try again later.');
-            }
-        };
-
-        fetchData();
-    }, []);
+    if (isLoading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
 
     return (
         <>
@@ -34,7 +30,7 @@ const Home = () => {
                     infiniteLoop={true}
                     showStatus={false}
                 >
-                    {popularMovies.map(movie => (
+                    {popularMovies.results.map(movie => (
                         <Link key={movie.id} style={{ textDecoration: "none", color: "snow" }} to={`/movie/${movie.id}`}>
                             <div className="posterImage">
                                 <img src={`https://image.tmdb.org/t/p/original${movie?.backdrop_path || ''}`} alt={movie?.original_title || ''} />
@@ -54,7 +50,6 @@ const Home = () => {
                     ))}
                 </Carousel>
                 <MovieList />
-                
             </div>
         </>
     );
