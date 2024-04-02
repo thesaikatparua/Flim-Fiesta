@@ -1,12 +1,12 @@
 import React from "react";
-import "./MovieList.css";
+import "./Toprated.css";
 import { useParams } from "react-router-dom";
-import Cards from "../card/Card";
+import Cards from "../../Components/card/Card";
 import { useQuery } from "react-query";
 
-const fetchMovieList = async (type) => {
+const fetchToprated = async (type) => {
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=b935b5ca8bde9733059fef48810c9af7&language=en-US`
+    `https://api.themoviedb.org/3/movie/top_rated?api_key=b935b5ca8bde9733059fef48810c9af7&language=en-US`
   );
   const data = await response.json();
   return data.results;
@@ -15,9 +15,9 @@ const fetchMovieList = async (type) => {
 const MovieList = () => {
   const { type } = useParams();
   
-  const { data: movieList, isLoading, isError } = useQuery(
-    ["movieList", type],
-    () => fetchMovieList(type)
+  const { data: toprated, isLoading, isError } = useQuery(
+    ["toprated", type],
+    () => fetchToprated(type)
   );
 
   if (isLoading) return <div>Loading...</div>;
@@ -26,7 +26,7 @@ const MovieList = () => {
   return (
     <div className="movie__list">
       <div className="list__cards">
-        {movieList.map((movie) => (
+        {toprated.map((movie) => (
           <Cards key={movie.id} movie={movie} />
         ))}
       </div>
