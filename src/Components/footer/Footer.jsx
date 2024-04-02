@@ -43,10 +43,10 @@ function Footer() {
         <div className="col">
           <h2>Links</h2>
           <Link to="/movies/upcoming" style={{ textDecoration: "none" }}>
-            <p id="link">Upcoming</p>
+            <p id="link">Upcoming...</p>
           </Link>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <p id="link">Toprated</p>
+          <Link to="/movies/top_rated"  style={{ textDecoration: "none" }}>
+            <p id="link">Toprated...</p>
           </Link>
           <Link to="/" style={{ textDecoration: "none" }}>
             <p id="link">Offer</p>

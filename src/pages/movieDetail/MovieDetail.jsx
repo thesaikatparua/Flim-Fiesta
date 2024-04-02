@@ -89,7 +89,7 @@ const Movie = () => {
             </div>
             <div className="button-container">
               <Link
-                to={`/movie/${id}/booking`}
+                to={`/movie/${id}/booking`} target="_blank"
                 style={{ textDecoration: "none", cursor: "pointer" }}
               >
                 <p>Book tickets</p>
