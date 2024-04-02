@@ -9,6 +9,7 @@ import Booking from './pages/booking/Book';
 import Hall from './pages/cinemahall/cinema';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import Foodcart from '/Components/foodcart/foodcart';
 
 const queryClient = new QueryClient();
 
