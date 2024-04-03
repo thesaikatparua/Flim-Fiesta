@@ -9,19 +9,23 @@ import Booking from './pages/booking/Book';
 import Hall from './pages/cinemahall/cinema';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import Login from './pages/login/Login';
 
 const queryClient = new QueryClient();
 
 const App = () => {
   const url = window.location.href;
   const bookingUrlFlag = url.includes('booking');
-
+  //const isLoginPage = url.includes('login');
+  
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
         {!bookingUrlFlag ? <Header /> : null}
+        {<Login /> ? null : <Header /> }
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
           <Route path="movie/:id" element={<MovieDetail />} />
           <Route path="movies/:type" element={<MovieList />} />
           <Route path="movie/search" element={<Search />} />
