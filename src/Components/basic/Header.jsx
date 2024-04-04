@@ -4,11 +4,10 @@ import "./Header.css";
 import { FaSearch } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
-import Dropdown from "../dropdown/dropdown";
-const Header = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
+
+const Header = () => {
+  
   return (
     <>
       <nav>
@@ -26,9 +25,7 @@ const Header = () => {
         </div>
 
         <div className="navright">
-          <Link
-            to="movie/search"
-            style={{ textDecoration: "none", color: "black" }}
+          <Link to="movie/search" style={{ textDecoration: "none", color: "black" }}
           >
             <div className="input-wrapper">
               <FaSearch id="search-icon" />
@@ -39,27 +36,17 @@ const Header = () => {
           <div className="location">
             <Link to="#" style={{ textDecoration: "none" }}>
               <FaLocationDot id="location-icon" style={{ color: "#000" }} />
-              <Dropdown />
             </Link>
           </div>
 
-          <Link to="#" style={{ textDecoration: "none" }}>
-            {isAuthenticated ? (
-              // for logout
-              <button
-                onClick={() =>
-                  logout({ logoutParams: { returnTo: window.location.origin } })
-                }
-              >
-                Sign Out
-              </button>
-            ) : (
-              //for login
-              <button onClick={() => loginWithRedirect()}>
-                <p>Sign In</p>
-              </button>
-            )}
+          <div className="login">
+          <Link to="/login" target="_blank"
+          style={{ textDecoration: "none" }}>
+          <button>Sign In</button>
           </Link>
+          </div>
+
+          
         </div>
       </nav>
     </>
