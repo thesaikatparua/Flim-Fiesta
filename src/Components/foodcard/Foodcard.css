@@ -1,0 +1,33 @@
+.food {
+  width: 15rem;
+  height:21rem;
+  border-radius: 10px;
+  background-color:snow;
+  margin: 1rem;
+
+}
+
+.food-img img {
+  width: 15rem;
+  height: 15rem;
+  padding:1rem 1rem 0;
+}
+
+#food-name{
+font-size:12px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.food-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 1rem;
+}
+
+.food-bottom p{
+    font-size:20px;
+    padding-top: 1rem;
+}

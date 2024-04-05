@@ -6,7 +6,7 @@ footer{
     bottom:0;
     background:rgb(51, 51, 56);
     color:#fff;
-    padding:3rem 2rem;
+    padding:3rem 3rem 0;
     border-top-left-radius: 125px;
     font-size:13px;
     line-height:20px;
@@ -15,7 +15,6 @@ footer{
   
 .row{
   width:100%;
-  margin:auto;
   displaY:flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -23,7 +22,7 @@ footer{
 }
 
 .col{
-  flex-basis:25%;
+  flex-basis:20%;
   cursor: pointer;
  
 }
@@ -54,7 +53,7 @@ footer{
 }
 
 
-form{
+.form{
   padding-bottom: 15px;
   display:flex;
   align-items: center;
@@ -63,21 +62,14 @@ form{
   margin-bottom: 50px;
 }
 
-form i{
-  font-size:1.5rem;
-  margin-right: 10px;
-}
-
-form input{
-  width:100%;
-  background: transparent;
-  color:#ccc;
+input{
   border:0;
-  outline:none;
-  font-size:1.2rem;
+  outline:0;
+  background:none;
+  color:snow;
+  font-size:20px;
 }
 
-#icon{
-  font-size:1.8rem;
-  margin-right:1rem;
+#icon i{
+  font-size:1.5rem;
 }
