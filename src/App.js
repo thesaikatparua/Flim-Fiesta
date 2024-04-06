@@ -17,25 +17,24 @@ const queryClient = new QueryClient();
 const App = () => {
   const url = window.location.href;
   const bookingUrlFlag = url.includes('booking');
-  //const isLoginPage = url.includes('login');
-  
+  const isSearchPage = url.includes('/search');
+
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
-        {!bookingUrlFlag ? <Header /> : null}
-        {<Login /> ? null : <Header /> }
+        {!bookingUrlFlag && !isSearchPage ? <Header /> : null}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="movie/:id" element={<MovieDetail />} />
           <Route path="movies/:type" element={<MovieList />} />
-          <Route path="movie/search" element={<Search />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/movie/:id/booking" element={<Hall />} />
           <Route path="/movie/:id/booking/ticket" element={<Booking />} />
           <Route path="/movie/:id/booking/food" element={<Food/>} />
           <Route path="/*" element={<h1>error page</h1>} />
         </Routes>
-        {!bookingUrlFlag ? <Footer /> : null}
+        {!bookingUrlFlag && !isSearchPage ? <Footer /> : null}
       </Router>
     </QueryClientProvider>
   );
