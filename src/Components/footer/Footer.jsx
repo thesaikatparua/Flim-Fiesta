@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import EmailIcon from '@mui/icons-material/Email';
 import "./Footer.css";
 
 const fetchPopularMovies = async () => {
@@ -70,18 +71,16 @@ function Footer() {
 
         <div className="col">
           <h2>Newsletter</h2>
-          <form>
-            <i className="fa-regular fa-envelope" ></i>
-            <input type="email" placeholder="Enter your email id" required />
-            <button type="submit">
-              <i className="fa-solid fa-arrow-right"></i>
-            </button>
-          </form>
-          <div >
-            <i class="fa-brands fa-instagram" id="icon"></i>
-            <i class="fa-brands fa-youtube" id="icon"></i>
-            <i class="fa-brands fa-facebook" id="icon"></i>
-            <i class="fa-brands fa-linkedin" id="icon"></i>
+          <div className="form">
+          <EmailIcon/> <input type="text" placeholder="Enter your email id"/>
+          <button>Submit</button>
+          </div>
+          
+          <div id="icon">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube" ></i>
+            <i class="fa-brands fa-facebook" ></i>
+            <i class="fa-brands fa-linkedin" ></i>
           </div>
         </div>
       </div>
