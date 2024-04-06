@@ -36,7 +36,18 @@ const Header = () => {
         </div>
 
         <div className="navright">
+<<<<<<< HEAD
           <Link to="/search" style={{ textDecoration: "none", color: "black" }}>
+=======
+
+          <Link
+            to="movie/search"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+
+          <Link to="/search" target="_blank" style={{ textDecoration: "none", color: "black" }}>
+
+>>>>>>> 5964aa98b5fa3fbb789c2921d847d1345cf811c2
             <div className="input-wrapper">
               <FaSearch id="search-icon" />
               <p>Search here...</p>
