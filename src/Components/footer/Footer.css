@@ -6,7 +6,7 @@ footer{
     bottom:0;
     background:rgb(51, 51, 56);
     color:#fff;
-    padding:80px 0 30px;
+    padding:3rem 3rem 0;
     border-top-left-radius: 125px;
     font-size:13px;
     line-height:20px;
@@ -14,21 +14,22 @@ footer{
 }
   
 .row{
-  width:85%;
-  margin:auto;
+  width:100%;
   displaY:flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
+  
 }
 
 .col{
-  flex-basis: 25%;
+  flex-basis:20%;
   cursor: pointer;
  
 }
 .col p{
   font-size:1rem;
+  color:snow;
 }
 .hero-logo{
   width:150px;
@@ -37,7 +38,7 @@ footer{
 }
 .col h2{
   width:fit-content;
-  margin-bottom: 40px;
+  margin-bottom:30px;
   position:relative;
   
 }
@@ -48,17 +49,12 @@ footer{
   margin:20px 0;
 }
 
-ul li {
-  list-style: none;
-  margin-bottom:12px;
+#link{
+  padding:5px 0;
 }
 
-ul li a {
-  text-decoration: none;
-  color:#fff;
-}
 
-form{
+.form{
   padding-bottom: 15px;
   display:flex;
   align-items: center;
@@ -67,15 +63,14 @@ form{
   margin-bottom: 50px;
 }
 
-form i{
-  font-size: 18px;
-  margin-right: 10px;
+input{
+  border:0;
+  outline:0;
+  background:none;
+  color:snow;
+  font-size:20px;
 }
 
-form input{
-  width:100%;
-  background: transparent;
-  color:#ccc;
-  border:0;
-  outline:none;
+#icon i{
+  font-size:1.5rem;
 }

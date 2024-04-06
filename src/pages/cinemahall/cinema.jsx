@@ -16,8 +16,7 @@ const fetchMovieDetail = async (id) => {
 const CinemaHall = () => {
   const { id } = useParams();
 
-  const { data: poster, isLoading, isError } = useQuery(
-  ["movieDetail", id],
+  const { data: poster, isLoading, isError } = useQuery(["movieDetail", id],
   () => fetchMovieDetail(id)
   );
 

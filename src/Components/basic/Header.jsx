@@ -1,13 +1,24 @@
-import React from "react"; // { useState }
+import React, { useState } from "react"; // { useState }
 import logo from "../../assets/logo.png";
 import "./Header.css";
 import { FaSearch } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
+//import Dropdown from "../dropdown/Dropdown";
+import { FaCity } from "react-icons/fa6";
 
 const Header = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const[selected, setSelected] = useState( );
+  const[isActive, setIsActive] = useState(false);
+  const options = [
+    { name: 'Kolkata', icon: <FaCity /> },
+    { name: 'Hyderabad', icon: <FaCity /> },
+    { name: 'Mumbai', icon: <FaCity /> },
+    { name: 'Delhi-NCR', icon: <FaCity /> },
+    { name: 'Bengaluru', icon: <FaCity /> },
+    { name: 'Chennai', icon: <FaCity /> }, 
+    { name: 'Pune', icon: <FaCity /> },
+  ];
 
   return (
     <>
@@ -26,36 +37,50 @@ const Header = () => {
         </div>
 
         <div className="navright">
-          <Link to="movie/search" style={{ textDecoration: "none",color:"black"}}>
+
+          <Link
+            to="movie/search"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+
+          <Link to="/search" target="_blank" style={{ textDecoration: "none", color: "black" }}>
+
             <div className="input-wrapper">
               <FaSearch id="search-icon" />
               <p>Search here...</p>
             </div>
           </Link>
 
-          <div className="location">
-            <Link to="#" style={{ textDecoration: "none" }}>
-              <FaLocationDot id="location-icon" style={{ color: "#000" }} />
+        <div className="dropdown">
+          <div className="dropdown-btn" onClick={() => setIsActive(!isActive)}>{selected}
+          <Link to="/dropdown" style={{ textDecoration: "none" }}>
+          <span><FaLocationDot /></span>
             </Link>
           </div>
-
-          <Link to="#" style={{ textDecoration: "none" }}>
-            {isAuthenticated ? (
-              // for logout
-              <button
-                onClick={() =>
-                  logout({ logoutParams: { returnTo: window.location.origin } })
-                }
-              >
-                Sign Out
-              </button>
-            ) : (
-              //for login
-              <button onClick={() => loginWithRedirect()}>
-                <p>Sign In</p>
-              </button>
+          {isActive && (
+            <div className="dropdown-content">
+                {options.map((option) => (
+                    <div 
+                    key={option.name}
+                    onClick={() => {
+                    setSelected(option.name)
+                    setIsActive(false)
+                    }}
+                    className="dropdown-item"
+                    >
+                    {option.icon}
+                    <span style={{ marginLeft: '8px' }}>{option.name}</span>
+                    </div>
+                ))}
+            </div>
             )}
-          </Link>
+        </div>
+
+          <div className="login">
+            <Link to="/login" style={{ textDecoration: "none" }}>
+              <button>Sign In</button>
+            </Link>
+          </div>
         </div>
       </nav>
     </>
