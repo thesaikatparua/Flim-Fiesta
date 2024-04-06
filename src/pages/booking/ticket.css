@@ -76,8 +76,9 @@
 
 .row {
   display: flex;
-  width: 100%;
-  padding: 1rem 5rem;
+  width:150%;
+  /* background-color: bisque; */
+  margin-top: 1rem;
 }
 
 .seat {
@@ -100,7 +101,7 @@
   width: 90%;
   height: 8px;
   background-color: rgb(255, 0, 0);
-  margin: 20px 0;
+  margin-top: -2rem;
 }
 
 .text {

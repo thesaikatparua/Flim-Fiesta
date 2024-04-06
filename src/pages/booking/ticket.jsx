@@ -71,7 +71,7 @@ const SeatBooking = () => {
             <div className="screen"></div>
             <div className="row">
               {/* Render seats dynamically */}
-              {Array.from({ length: 52 }, (_, rowIndex) => (
+              {Array.from({ length:50 }, (_, rowIndex) => (
                 <React.Fragment key={rowIndex}>
                   {Array.from({ length: 8 }, (_, seatIndex) => {
                     const seatNumber = rowIndex * 8 + seatIndex + 1;

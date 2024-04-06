@@ -38,7 +38,7 @@ const allData= data.filter(item => !arr.includes(item) && !location.includes(ite
       <div>
         <div className="search">
           <form onSubmit={submitForm}>
-            <input type="text" placeholder="Search here..." value={val} onChange={changehandle} />
+            <input type="text" placeholder="Search here..." style={{color:"black"}}value={val} onChange={changehandle} />
             <button type="submit" value={Search}>Search</button>
           </form>
           <div id="icon">
