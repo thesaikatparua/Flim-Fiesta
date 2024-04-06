@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }from 'react';
 import Header from './Components/basic/Header';
 import Home from './pages/home/Home';
 import Footer from './Components/footer/Footer';
@@ -15,7 +15,11 @@ import Login from './pages/login/Login';
 const queryClient = new QueryClient();
 
 const App = () => {
+  const [selected, setSelected] = useState("");//for dropdown
   const url = window.location.href;
+
+  const bookingUrlFlag = url.includes('booking'); 
+  //const isLoginPage = url.includes('login');
   const bookingUrlFlag = url.includes('booking');
   const isSearchPage = url.includes('/search');
 
@@ -24,6 +28,7 @@ const App = () => {
       <Router>
         {!bookingUrlFlag && !isSearchPage ? <Header /> : null}
         <Routes>
+          <Route path="/dropdown" element={<Header selected={(selected)} setSelected={setSelected}/>} />
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="movie/:id" element={<MovieDetail />} />
