@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams , Link} from "react-router-dom";
 import "./ticket.css";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import { useQuery } from "react-query";
@@ -71,7 +71,7 @@ const SeatBooking = () => {
             <div className="screen"></div>
             <div className="row">
               {/* Render seats dynamically */}
-              {Array.from({ length: 52 }, (_, rowIndex) => (
+              {Array.from({ length:50 }, (_, rowIndex) => (
                 <React.Fragment key={rowIndex}>
                   {Array.from({ length: 8 }, (_, seatIndex) => {
                     const seatNumber = rowIndex * 8 + seatIndex + 1;
@@ -187,7 +187,7 @@ const SeatBooking = () => {
             </div>
           </div>
 
-          <button id="proceed">Proceed</button>
+          <Link  to={`/movie/${id}/booking/food`} style={{ textDecoration: "none", cursor: "pointer" }} ><button id="proceed">Proceed</button></Link>
           
         </div>
         {/* right side booking summary end*/}

@@ -37,10 +37,14 @@ const Header = () => {
         </div>
 
         <div className="navright">
+
           <Link
             to="movie/search"
             style={{ textDecoration: "none", color: "black" }}
           >
+
+          <Link to="/search" target="_blank" style={{ textDecoration: "none", color: "black" }}>
+
             <div className="input-wrapper">
               <FaSearch id="search-icon" />
               <p>Search here...</p>
