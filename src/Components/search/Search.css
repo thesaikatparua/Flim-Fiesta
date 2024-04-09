@@ -1,6 +1,3 @@
-.movie-search{
-   width:35em;
-   margin:auto;
-   background-color:snow;
-   height:4rem;
+Button:hover{
+   background-color: snow;
 }
