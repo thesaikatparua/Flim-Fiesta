@@ -8,7 +8,7 @@ const fetchMovies = async () => {
     `https://api.themoviedb.org/3/movie/popular?api_key=b935b5ca8bde9733059fef48810c9af7&language=en-US`
   );
   const data = await response.json();
-  return data.results.slice(0, 18);
+  return data.results;
 };
 
 const Search = () => {

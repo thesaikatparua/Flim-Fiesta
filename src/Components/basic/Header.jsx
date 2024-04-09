@@ -1,87 +1,45 @@
-import React, { useState } from "react"; // { useState }
+import React from "react";
 import logo from "../../assets/logo.png";
 import "./Header.css";
 import { FaSearch } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-//import Dropdown from "../dropdown/Dropdown";
-import { FaCity } from "react-icons/fa6";
+import Location from "../location/Location";
+import Search from "./movieSearch";
 
 const Header = () => {
-  const[selected, setSelected] = useState( );
-  const[isActive, setIsActive] = useState(false);
-  const options = [
-    { name: 'Kolkata', icon: <FaCity /> },
-    { name: 'Hyderabad', icon: <FaCity /> },
-    { name: 'Mumbai', icon: <FaCity /> },
-    { name: 'Delhi-NCR', icon: <FaCity /> },
-    { name: 'Bengaluru', icon: <FaCity /> },
-    { name: 'Chennai', icon: <FaCity /> }, 
-    { name: 'Pune', icon: <FaCity /> },
-  ];
-
   return (
     <>
       <nav>
-        <div className="navleft">
+        <Link to="/" style={{ textDecoration: "none" }}>
           <div className="logo">
-            <Link to="/" style={{ textDecoration: "none" }}>
-              <img src={logo} alt="logo" className="nav_logo" />
-            </Link>
+            <img
+              src={logo}
+              alt="logo"
+              style={{ width: "8rem", height: "3rem" }}
+            />
           </div>
-          <div className="upcoming">
-            <Link to="/movies/upcoming" style={{ textDecoration: "none" }}>
-              <p>Upcoming</p>
-            </Link>
+        </Link>
+        <Link style={{ textDecoration: "none" }}>
+          <div className="search-bar">
+            <FaSearch
+              id="search-icon"
+              style={{ marginRight: "1rem", color: "black" }}
+            />
+            <p style={{ color: "black" }}><Search/></p>
+            {/* <p style={{ color: "black" }}>Search</p> */}
           </div>
-        </div>
-
-        <div className="navright">
-
-          <Link
-            to="movie/search"
-            style={{ textDecoration: "none", color: "black" }}
-          >
-
-          <Link to="/search" target="_blank" style={{ textDecoration: "none", color: "black" }}>
-
-            <div className="input-wrapper">
-              <FaSearch id="search-icon" />
-              <p>Search here...</p>
+        </Link>
+          <Link style={{ textDecoration: "none" }}>
+            <div className="location">
+              <Location style={{color:"black"}} />
             </div>
           </Link>
 
-        <div className="dropdown">
-          <div className="dropdown-btn" onClick={() => setIsActive(!isActive)}>{selected}
-          <Link to="/dropdown" style={{ textDecoration: "none" }}>
-          <span><FaLocationDot /></span>
-            </Link>
-          </div>
-          {isActive && (
-            <div className="dropdown-content">
-                {options.map((option) => (
-                    <div 
-                    key={option.name}
-                    onClick={() => {
-                    setSelected(option.name)
-                    setIsActive(false)
-                    }}
-                    className="dropdown-item"
-                    >
-                    {option.icon}
-                    <span style={{ marginLeft: '8px' }}>{option.name}</span>
-                    </div>
-                ))}
-            </div>
-            )}
-        </div>
-
+        <Link style={{ textDecoration: "none" }}>
           <div className="login">
-            <Link to="/login" style={{ textDecoration: "none" }}>
-              <button>Sign In</button>
-            </Link>
+            <button>Sign In</button>
           </div>
-        </div>
+        </Link>
       </nav>
     </>
   );
