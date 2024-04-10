@@ -26,7 +26,7 @@ const Header = () => {
               style={{ marginRight: "1rem", color: "black" }}
             />
             <p style={{ color: "black" }}><Search/></p>
-            {/* <p style={{ color: "black" }}>Search</p> */}
+           
           </div>
         </Link>
           <Link style={{ textDecoration: "none" }}>
