@@ -10,6 +10,7 @@ export default function SelectSmall() {
 
   const handleChange = (event) => {
     setAge(event.target.value);
+    
   };
 
   return (
@@ -21,11 +22,11 @@ export default function SelectSmall() {
         value={age}
         label="Age"
         onChange={handleChange}
-        
+       
       >
         <MenuItem value={10}>Kolkata</MenuItem>
         <MenuItem value={20}>Delhi</MenuItem>
-        <MenuItem value={30}>Bengaluru</MenuItem>
+        <MenuItem value={100}>Bengaluru</MenuItem>
         <MenuItem value={30}>Mumbai</MenuItem>
         <MenuItem value={30}>Hyderabad</MenuItem>
       </Select>
