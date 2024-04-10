@@ -18,8 +18,6 @@ const App = () => {
   const [selected, setSelected] = useState("");//for dropdown
   const url = window.location.href;
 
-  const bookingUrlFlag = url.includes('booking'); 
-  //const isLoginPage = url.includes('login');
   const bookingUrlFlag = url.includes('booking');
   const isSearchPage = url.includes('/search');
 

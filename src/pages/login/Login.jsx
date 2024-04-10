@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaUserLarge } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 // import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ const Login = () => {
               </div>
                     <div className="inputs">
                      {action==="Login"?<div></div>:<div className="inputt">   {/*to hide forgot passwordin sign up we used this empty div */}
-                      <FaUserLarge id="icon" style={{ textDecoration: "none" }}/>
+                      <FaUser id="icon" style={{ textDecoration: "none" }}/>
                         <input type="text" placeholder="Name"/>
                       </div>}
                       
@@ -36,9 +36,8 @@ const Login = () => {
                     <div className="submit-container">
                       <div className={action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
                       <div className={action==="Sign Up"?"submit gray":"submit"} onClick={()=>{setAction("Login")}}>Login</div>
-                    </div>
-                    
-      </div>
+                    </div>   
+                  </div>
                 
                 {/* </Link> */}
       
