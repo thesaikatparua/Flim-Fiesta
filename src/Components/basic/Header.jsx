@@ -5,6 +5,8 @@ import { FaSearch } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaCity } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import Location from "../location/Location";
+import Search from "./movieSearch";
 
 const Header = () => {
   const [selected, setSelected] = useState('');
@@ -22,33 +24,28 @@ const Header = () => {
   return (
     <>
       <nav>
-        <div className="navleft">
+        <Link to="/" style={{ textDecoration: "none" }}>
           <div className="logo">
-            <Link to="/" style={{ textDecoration: "none" }}>
-              <img src={logo} alt="logo" className="nav_logo" />
-            </Link>
+            <img
+              src={logo}
+              alt="logo"
+              style={{ width: "8rem", height: "3rem" }}
+            />
           </div>
-          <div className="upcoming">
-            <Link to="/movies/upcoming" style={{ textDecoration: "none" }}>
-              <p>Upcoming</p>
-            </Link>
-          </div>
+        </Link>
+        <div className="search-bar">
+          <FaSearch
+            id="search-icon"
+            style={{ marginRight: "1rem", color: "black" }}
+          />
+          <p style={{ color: "black" }}><Search/></p>
         </div>
 
         <div className="navright">
-          <Link to="/search" style={{ textDecoration: "none", color: "black" }}>
-            <div className="input-wrapper">
-              <FaSearch id="search-icon" />
-              <p>Search here...</p>
-            </div>
-          </Link>
-
           <div className="dropdown">
             <div className="dropdown-btn" style={{ textDecoration: "none" }} onClick={() => setIsActive(!isActive)}>
               {selected}
-              <Link to="/dropdown" style={{ textDecoration: "none" }}>
-                <span><FaLocationDot /></span>
-              </Link>
+              <span><FaLocationDot /></span>
             </div>
             {isActive && (
               <div className="dropdown-content">
@@ -69,11 +66,24 @@ const Header = () => {
             )}
           </div>
 
-          <div className="login">
-            <Link to="/login" style={{ textDecoration: "none" }}>
+          <Link to="/search" style={{ textDecoration: "none", color: "black" }}>
+            <div className="input-wrapper">
+              <FaSearch id="search-icon" />
+              <p>Search here...</p>
+            </div>
+          </Link>
+
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <div className="location">
+              <Location style={{color:"black"}} />
+            </div>
+          </Link>
+
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <div className="login">
               <button>Sign In</button>
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
       </nav>
     </>

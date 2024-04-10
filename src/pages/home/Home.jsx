@@ -6,7 +6,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import MovieList from '../../Components/movieList/MovieList';
 
-
 const fetchPopularMovies = async () => {
     const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=b935b5ca8bde9733059fef48810c9af7&language=en-US");
     if (!response.ok) {
