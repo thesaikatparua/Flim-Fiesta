@@ -1,5 +1,4 @@
 import React from "react";
-import "./Toprated.css";
 import { useParams } from "react-router-dom";
 import Cards from "../../Components/card/Card";
 import { useQuery } from "react-query";

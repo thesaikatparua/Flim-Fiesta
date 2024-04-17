@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap');
 
 .movie__list {
-    margin-top: 3rem;
-    padding: 0 3rem 3rem 3rem;
+   padding:4rem 3rem 2rem;
 }
 
 .list__title {
