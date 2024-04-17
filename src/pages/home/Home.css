@@ -11,14 +11,13 @@
 }
 .poster{
     background-color:#F0F0F0;
-    
+
 }
 .posterImage{
     height: 500px;
 }
 
 .posterImage > img {
-    margin: auto;
     display: block;
     width: 100%;
 }
@@ -47,7 +46,7 @@
 
 .posterImage__runtime {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 .posterImage__rating {

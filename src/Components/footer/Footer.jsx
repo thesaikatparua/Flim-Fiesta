@@ -30,8 +30,8 @@ function Footer() {
 
   return (
     <footer>
-      <div className="row">
-        <div className="col">
+      <div className="footer-row">
+        <div className="footer-col">
           <Link to="/">
             <img src={logo} alt="logo" className="hero-logo" />
           </Link>
@@ -41,7 +41,7 @@ function Footer() {
           <h4>+91 - 0123456789</h4>
         </div>
 
-        <div className="col">
+        <div className="footer-col">
           <h2>Links</h2>
           <Link to="/movies/upcoming" style={{ textDecoration: "none" }}>
             <p id="link">Upcoming...</p>
@@ -60,7 +60,7 @@ function Footer() {
           </Link>
         </div>
 
-        <div className="col">
+        <div className="footer-col">
           <h2>Movies</h2>
           {popularMovies.results.slice(0,5).map(movie =>(
             <Link key={movie.id} style={{ textDecoration: "none", color: "snow" }} to={`/movie/${movie.id}`}>
@@ -69,7 +69,7 @@ function Footer() {
           ))}
         </div>
 
-        <div className="col">
+        <div className="footer-col">
           <h2>Newsletter</h2>
           <div className="form">
           <EmailIcon/> <input type="text" placeholder="Enter your email id"/>
