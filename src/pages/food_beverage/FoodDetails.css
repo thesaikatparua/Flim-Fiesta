@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
 .food-container{
     display: flex;
 }
@@ -22,3 +24,83 @@
     flex-wrap: wrap ;
     justify-content: center;
 }
+
+/* right side food booking summary start  */
+
+.food-right{
+    flex-basis:25%;
+    height:100vh;
+    background-color: snow;
+  }
+  
+  .food-right h3{
+    font-size:15px;
+    margin:1rem;
+    font-family: 'Poppins';
+  }
+  
+  .food-detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .detail-left{
+    flex-basis:30%;
+    padding:2rem;
+  }
+  #banner{
+    width:5rem;
+    height:7rem;
+    border-radius: 5px;
+    box-shadow: none;
+  }
+  
+  .detail-right{
+    flex-basis:70%;
+    padding:1rem;
+  }
+  
+  .banner-name{
+    font-size:18px;
+    font-weight: bold;
+    font-family: 'Poppins';
+  }
+  
+  #summary{
+    font-size:14px; 
+    
+  }
+  
+  .food-info{
+    padding:1rem;
+    font-family: 'Poppins';
+  }
+  
+  button{
+    background:  rgb(246, 73, 73);
+    margin:1rem 0 0 0;
+    font-size:15px;
+    padding:10px 15px;
+  }
+  
+  button:hover{
+    background-color: rgb(235, 136, 136);
+  }
+  
+  .ticket-info{
+    padding:1rem;
+    font-family: 'Poppins';
+  }
+  
+  #payment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins';
+  }
+  
+  #proceed{
+    width:90%;
+    margin:0 1rem;
+  }
+  /* right side booking summary end */
