@@ -33,7 +33,7 @@
     width: 75%;
     display: flex;
     position: relative;
-    bottom: 225px;
+    bottom:240px;
 }
 
 .movie__detailLeft {
@@ -47,10 +47,9 @@
 }
 
 .movie__detailRight {
-   
     display: flex;
     flex-direction: column;
-    height: 450px;
+    height:500px;
     justify-content:space-between ;
 }
 
@@ -80,9 +79,18 @@
     margin-right: 1rem;
 }
 
+.movie-trailer{
+    width:6rem;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    float: right;
+    cursor: pointer;
+}
 
 .movie__detailRightBottom {
-    margin: 2rem 0;
     flex: 0.8;
 }
 
@@ -113,21 +121,18 @@
     position: relative;
     align-items: center;
 }
-.synopsisText > div:last-of-type {
-    margin-left: auto;
-}
 
-.movie__links {
+/* .movie__links {
     position: relative;
     bottom: 120px;
     display: flex;
     justify-content: space-between;
     width: 75%;
-}
+} */
 
 .movie__heading {
     font-size: 2.2rem;
-    margin-top: -7rem;
+    margin-top:-13rem;
 }
 
 .movie__Button {
@@ -142,25 +147,12 @@
     font-weight: bold;
 }
 
-.movie__homeButton {
-    background-color:rgb(255, 0, 0);
-    
-}
-
-.movie__imdbButton {
-    background-color:#f3ce13;
-}
-
-.newTab {
-    margin-left: 1.4rem;
-}
-
 .movie__production {
     width: 85%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-bottom: 4rem;
+    margin-bottom:5rem;
 }
 
 

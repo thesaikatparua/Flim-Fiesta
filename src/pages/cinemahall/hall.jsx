@@ -26,7 +26,7 @@ const Hall = (props) => {
             </Link>
         </div>
         <div className="hall-right">
-           <FastfoodIcon style={{fontSize:"30px"}}/>
+           <Link to={`/movie/${id}/booking/food`} style={{textDecoration:"none", color:"black"}}><FastfoodIcon style={{fontSize:"30px"}}/></Link>
           <Link to={props.location} target="_blank"><DirectionsIcon style={{marginTop:"0.5rem", color:"rgb(241, 70, 70)"}}/></Link> 
         </div>
       </div>

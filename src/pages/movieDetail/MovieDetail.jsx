@@ -3,10 +3,11 @@ import "./MovieDetail.css";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useQuery } from "react-query";
+import Moviemodal from "./MovieModal";
 
 const fetchMovieDetail = async (id) => {
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}?api_key=b935b5ca8bde9733059fef48810c9af7&language=en-US`
+    `https://api.themoviedb.org/3/movie/${id}?api_key=b935b5ca8bde9733059fef48810c9af7&language=en-US&append_to_response=videos`
   );
   const data = await response.json();
   return data;
@@ -15,10 +16,12 @@ const fetchMovieDetail = async (id) => {
 const Movie = () => {
   const { id } = useParams();
 
-  const { data: currentMovieDetail, isLoading, isError } = useQuery(
-    ["movieDetail", id],
-    () => fetchMovieDetail(id)
-  );
+  const {
+    data: currentMovieDetail,
+    isLoading,
+    isError,
+  } = useQuery(["movieDetail", id], () => fetchMovieDetail(id));
+
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error fetching data</div>;
@@ -73,23 +76,25 @@ const Movie = () => {
             </div>
             <div className="movie__genres">
               {currentMovieDetail &&
-              currentMovieDetail.genres &&
-              currentMovieDetail.genres.map((genre) => (
-                <span key={genre.id} className="movie__genre">
-                  {genre.name}
-                </span>
-              ))}
+                currentMovieDetail.genres &&
+                currentMovieDetail.genres.map((genre) => (
+                  <span key={genre.id} className="movie__genre">
+                    {genre.name}
+                  </span>
+                ))}
+            </div>
+            <div className="movie-trailer">
+              <Moviemodal/>
             </div>
           </div>
 
           <div className="movie__detailRightBottom">
             <div className="synopsisText">Synopsis</div>
-            <div>
-              {currentMovieDetail ? currentMovieDetail.overview : ""}
-            </div>
+            <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div>
             <div className="button-container">
               <Link
-                to={`/movie/${id}/booking`} target="_blank"
+                to={`/movie/${id}/booking`}
+                target="_blank"
                 style={{ textDecoration: "none", cursor: "pointer" }}
               >
                 <p>Book tickets</p>
