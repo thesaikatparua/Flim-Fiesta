@@ -8,6 +8,7 @@ import MovieDetail from './pages/movieDetail/MovieDetail';
 import Booking from './pages/booking/Book';
 import Hall from './pages/cinemahall/cinema';
 import Food from "./pages/food_beverage/FoodDetails";
+import Offer from "./pages/offer/Offer";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Login from './pages/login/Login';
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/movie/:id/booking" element={<Hall />} />
           <Route path="/movie/:id/booking/ticket" element={<Booking />} />
           <Route path="/movie/:id/booking/food" element={<Food/>} />
+          <Route path="/offer" element={<Offer />} />
           <Route path="/*" element={<h1>error page</h1>} />
    
         </Routes>

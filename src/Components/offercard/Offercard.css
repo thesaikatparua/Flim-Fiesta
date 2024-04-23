@@ -1,0 +1,15 @@
+
+  
+  .offer-img img {
+    width: 31rem;
+    height: 19rem;
+    padding:1rem 1rem 0;
+  }
+  
+  #offer-name{
+  font-size:12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
