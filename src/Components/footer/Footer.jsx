@@ -49,10 +49,10 @@ function Footer() {
           <Link to="/movies/top_rated"  style={{ textDecoration: "none" }}>
             <p id="link">Toprated...</p>
           </Link>
-          <Link to="/" style={{ textDecoration: "none" }}>
+           <Link to="/offer" style={{ textDecoration: "none" }}> {/*offer */}
             <p id="link">Offer</p>
           </Link>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/movies/food" style={{ textDecoration: "none" }}> {/*offer */}
             <p id="link">Food</p>
           </Link>
           <Link to="/" style={{ textDecoration: "none" }}>
