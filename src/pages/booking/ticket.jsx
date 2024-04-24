@@ -10,19 +10,18 @@ const SeatBooking = () => {
 
   const { id } = useParams();
 
-  const {
-    data: ticket,
-    isLoading,
-    isError,
-  } = useQuery(["movie", id], async () => {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`
-    );
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
+  const { data: ticket, isLoading, isError } = useQuery(
+    ["movie", id],
+    async () => {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
     }
-    return response.json();
-  });
+  );
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error fetching data</div>;
@@ -75,7 +74,7 @@ const SeatBooking = () => {
               {Array.from({ length: 30 }, (_, rowIndex) => (
                 <div key={rowIndex} className="seat-row">
                   {Array.from({ length: 18 }, (_, seatIndex) => {
-                    const seatNumber = rowIndex * 8 + seatIndex + 1;
+                    const seatNumber = rowIndex * 18 + seatIndex + 1;
                     const isOccupied = [
                       15, 16, 23, 24, 25, 32, 33, 40, 41,
                     ].includes(seatNumber);
@@ -104,7 +103,7 @@ const SeatBooking = () => {
 
         <div className="moviebook_right">
           <h3>Booking summary</h3>
-          <hr width="100%" size="2"></hr>
+          <hr width="100%" size="2" />
           <div className="movie-detail">
             <div className="detail-left">
               <img
@@ -137,14 +136,14 @@ const SeatBooking = () => {
               </div>
             </div>
           </div>
-          <hr width="100%" size="2"></hr>
+          <hr width="100%" size="2" />
           <div className="seat-info">
             <h5>Seat Info</h5>
             <p>EXECUTIVE</p>
-            <button id="button">{selectedSeats.length}</button>
+            <button className="seat-button">{selectedSeats.length}</button>
           </div>
 
-          <hr width="100%" size="2"></hr>
+          <hr width="100%" size="2" />
 
           <div className="ticket-info">
             <h5>Tickets</h5>
@@ -157,7 +156,7 @@ const SeatBooking = () => {
             </div>
           </div>
 
-          <hr width="100%" size="2"></hr>
+          <hr width="100%" size="2" />
 
           <div className="ticket-info">
             <h5>Payment Info</h5>
@@ -177,7 +176,7 @@ const SeatBooking = () => {
             </div>
           </div>
 
-          <hr width="100%" size="2"></hr>
+          <hr width="100%" size="2" />
 
           <div className="ticket-info">
             <div id="payment">
