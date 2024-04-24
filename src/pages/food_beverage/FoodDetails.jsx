@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+ import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import data from "../../data/foodApi";
 import Foodcard from "../../Components/foodcard/Foodcard";
