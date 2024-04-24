@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams , Link} from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "./ticket.css";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import { useQuery } from "react-query";
@@ -10,18 +10,19 @@ const SeatBooking = () => {
 
   const { id } = useParams();
 
-  const { data: ticket, isLoading, isError } = useQuery(
-    ["movie", id],
-    async () => {
-      const response = await fetch(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`
-      );
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
+  const {
+    data: ticket,
+    isLoading,
+    isError,
+  } = useQuery(["movie", id], async () => {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`
+    );
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
     }
-  );
+    return response.json();
+  });
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error fetching data</div>;
@@ -71,9 +72,9 @@ const SeatBooking = () => {
             <div className="screen"></div>
             <div className="row">
               {/* Render seats dynamically */}
-              {Array.from({ length:50 }, (_, rowIndex) => (
-                <React.Fragment key={rowIndex}>
-                  {Array.from({ length: 8 }, (_, seatIndex) => {
+              {Array.from({ length: 30 }, (_, rowIndex) => (
+                <div key={rowIndex} className="seat-row">
+                  {Array.from({ length: 18 }, (_, seatIndex) => {
                     const seatNumber = rowIndex * 8 + seatIndex + 1;
                     const isOccupied = [
                       15, 16, 23, 24, 25, 32, 33, 40, 41,
@@ -91,7 +92,7 @@ const SeatBooking = () => {
                       ></div>
                     );
                   })}
-                </React.Fragment>
+                </div>
               ))}
             </div>
           </div>
@@ -121,7 +122,8 @@ const SeatBooking = () => {
               </div>
               <div id="summary">
                 <div className="movie__rating">
-                  {ticket ? ticket.vote_average : ""} <i className="fas fa-star" />
+                  {ticket ? ticket.vote_average : ""}{" "}
+                  <i className="fas fa-star" />
                   <span className="movie__voteCount">
                     {ticket ? "(" + ticket.vote_count + ") votes" : ""}
                   </span>
@@ -187,8 +189,12 @@ const SeatBooking = () => {
             </div>
           </div>
 
-          <Link  to={`/movie/${id}/booking/food`} style={{ textDecoration: "none", cursor: "pointer" }} ><button id="proceed">Proceed</button></Link>
-          
+          <Link
+            to={`/movie/${id}/booking/food`}
+            style={{ textDecoration: "none", cursor: "pointer" }}
+          >
+            <button id="proceed">Proceed</button>
+          </Link>
         </div>
         {/* right side booking summary end*/}
       </div>
