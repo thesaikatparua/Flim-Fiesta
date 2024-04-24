@@ -71,9 +71,9 @@ const SeatBooking = () => {
             <div className="screen"></div>
             <div className="row">
               {/* Render seats dynamically */}
-              {Array.from({ length: 30 }, (_, rowIndex) => (
+              {Array.from({ length:30 }, (_, rowIndex) => (
                 <div key={rowIndex} className="seat-row">
-                  {Array.from({ length: 18 }, (_, seatIndex) => {
+                  {Array.from({ length: 15 }, (_, seatIndex) => {
                     const seatNumber = rowIndex * 18 + seatIndex + 1;
                     const isOccupied = [
                       15, 16, 23, 24, 25, 32, 33, 40, 41,
