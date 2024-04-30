@@ -52,8 +52,8 @@ function Footer() {
            <Link to="/offer" style={{ textDecoration: "none" }}> {/*offer */}
             <p id="link">Offer</p>
           </Link>
-          <Link to="/movies/food" style={{ textDecoration: "none" }}> {/*offer */}
-            <p id="link">Food</p>
+          <Link to="#" style={{ textDecoration: "none" }}> {/*offer */}
+            <p id="link">Cinemas</p>
           </Link>
           <Link to="/" style={{ textDecoration: "none" }}>
             <p id="link">Contact Us</p>
