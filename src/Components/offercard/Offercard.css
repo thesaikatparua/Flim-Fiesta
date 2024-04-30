@@ -1,15 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
-  
-  .offer-img img {
-    width: 31rem;
-    height: 19rem;
-    padding:1rem 1rem 0;
-  }
-  
-  #offer-name{
-  font-size:12px;
+.offer-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  padding-top: 4rem; /* Decreased padding for mobile */
+  padding-bottom: 2rem; /* Decreased padding for mobile */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  overflow-y: hidden;
+}
+  
+.offer-img img {
+  width: 31rem;
+  height: 19rem;
+  padding:1rem 1rem 0;
   }
   
+#offer-name{
+font-size:12px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+

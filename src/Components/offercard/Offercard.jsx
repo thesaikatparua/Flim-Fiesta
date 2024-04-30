@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Offercard.css";
+import "../../media query/Offerresp.css"
 
 const Offer = (props) => {
 

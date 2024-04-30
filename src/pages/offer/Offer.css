@@ -1,24 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
-.offer-container{
-    display: flex;
-    padding-top: 6rem;
-    padding-bottom: 4rem;
+/* Apply styles to the body or any container element wrapping your offer content */
+body {
+    overflow-x: hidden; /* Hide horizontal overflow globally */
 }
 
-.btn-group{
-    width:30rem;
-    background-color:snow;
-    margin:1rem 21rem 0;
+.offer-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem; /* Decreased padding for mobile */
+    padding-bottom: 2rem; /* Decreased padding for mobile */
+}
+
+.btn-group {
+    width: 100%; /* Full width on mobile */
+    max-width: 30rem; /* Max width for larger screens */
+    background-color: snow;
+    margin: 1rem auto 0; /* Centered margin with auto on sides */
     display: flex;
     align-items: center;
-    justify-content:space-between;
-    padding: 0 1rem 1rem;
+    justify-content: space-between;
+    padding: 0.5rem 1rem; /* Reduced padding for mobile */
     border-radius: 10px;
 }
 
-.offer-item{
+.offer-item {
     display: flex;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
     justify-content: center;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .btn-group {
+        max-width: 25rem; /* Decreased max width for medium-sized screens */
+        margin: 0 auto; /* Centered margin for mobile */
+        padding: 0.5rem; /* Reduced padding for mobile */
+    }
 }
