@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Location from "../location/Location";
 import Search from "./movieSearch";
 
+
 const Header = () => {
   return (
     <>
@@ -35,7 +36,7 @@ const Header = () => {
             </div>
           </Link>
 
-        <Link style={{ textDecoration: "none" }}>
+        <Link to="#" style={{ textDecoration: "none" }}>
           <div className="login">
             <button>Sign In</button>
           </div>

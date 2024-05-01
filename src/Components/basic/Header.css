@@ -13,7 +13,7 @@ nav {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
- margin-bottom: 50rem;
+
 }
 
 
@@ -39,19 +39,3 @@ nav {
   margin-bottom:1rem;
 }
 
-.form{
-  padding-bottom: 15px;
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 50px;
-}
-
-input{
-  border:0;
-  outline:0;
-  background:none;
-  color:snow;
-  font-size:20px;
-}
