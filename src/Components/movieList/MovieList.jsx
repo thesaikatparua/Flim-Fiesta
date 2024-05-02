@@ -3,6 +3,7 @@ import "./MovieList.css";
 import { useParams } from "react-router-dom";
 import Cards from "../card/Card";
 import { useQuery } from "react-query";
+import "../../media query/Movielistresp.css"
 
 const fetchMovieList = async (type) => {
   const response = await fetch(

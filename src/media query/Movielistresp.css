@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap');
+
+/* Media Queries for Tablet */
+@media only screen and (max-width: 768px) {
+    .cards {
+        min-width: 150px;
+        height: 250px;
+        margin: 0.5rem;
+    }
+
+    .cards__img {
+        height: 250px;
+    }
+
+    .cards__overlay {
+        height: 240px;
+    }
+
+    .card__title {
+        font-size: 0.9rem;
+    }
+
+    .card__runtime,
+    .card__description {
+        font-size: 0.7rem;
+    }
+}
+
+/* Media Queries for Mobile */
+@media only screen and (max-width: 480px) {
+    .cards {
+        min-width: 100px;
+        height: 200px;
+        margin: 1.1rem;
+
+    }
+
+    .cards__img {
+        height: 200px;
+    }
+
+    .cards__overlay {
+        height: 190px;
+    }
+
+    .card__title {
+        font-size: 0.8rem;
+    }
+
+    .card__runtime,
+    .card__description {
+        font-size: 0.6rem;
+    }
+}
+/* Media Queries for Mobile */
+@media only screen and (max-width: 480px) {
+    .movie__list {
+        padding: 3rem 1rem 1rem;
+        
+    }
+
+    .list__title {
+        font-size: 1.25rem;
+        margin: 1.5rem 1rem 0.5rem 1rem;
+    }
+
+}
