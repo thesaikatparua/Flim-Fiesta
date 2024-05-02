@@ -41,4 +41,11 @@
     bottom:3rem;
     }
 
+    .poster .carousel.carousel-slider .control-arrow.control-next::before{
+       margin-left:22rem;
+    }
+
+    .poster .carousel.carousel-slider .control-arrow.control-prev::before{
+        margin-right:25rem;
+     }
   }
