@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../assets/logo.png";
 import "./Header.css";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Location from "../location/Location";
 import Search from "./movieSearch";
+import {Name} from "../form/Registration";
+import Signup from "../form/Registration";
 
-const Header = () => {
+const Header = (props) => {
+
   return (
     <>
       <nav>
@@ -35,7 +38,7 @@ const Header = () => {
             </div>
           </Link>
 
-        <Link style={{ textDecoration: "none" }}>
+        <Link to="/login" style={{ textDecoration: "none" }}>
           <div className="login">
             <button>Sign In</button>
           </div>

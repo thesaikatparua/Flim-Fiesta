@@ -11,8 +11,8 @@ import Food from "./pages/food_beverage/FoodDetails";
 import Offer from "./pages/offer/Offer";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import Login from './pages/login/Login';
-
+import Signup from "./Components/form/Registration"
+import Signin from "./Components/form/Login";
 
 const queryClient = new QueryClient();
 
@@ -29,7 +29,8 @@ const App = () => {
         {!bookingUrlFlag && !isSearchPage ? <Header /> : null}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup/>} />
+          <Route path="/login" element={<Signin/>} />
           <Route path="movie/:id" element={<MovieDetail />} />
           <Route path="movies/:type" element={<MovieList />} />
           <Route path="/search" element={<Search />} />
