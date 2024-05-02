@@ -190,3 +190,81 @@ button:hover{
 }
 /* right side booking summary end */
 
+/* CSS for smaller screens (e.g., mobile) */
+@media only screen and (max-width: 768px) {
+  /* Adjustments for the right side booking summary */
+
+  
+  .moviebook_right {
+    display: block; /* Show the summary */
+    flex-basis: 100%; /* Take full width */
+    height: auto; /* Allow content to determine height */
+  }
+
+  .movie-detail {
+    flex-wrap: wrap; /* Allow items to wrap */
+  }
+
+  .detail-left,
+  .detail-right {
+    flex-basis: 100%; /* Take full width */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ticket-booking {
+    flex-direction: column;
+  }
+
+  .seat-booking {
+    flex-basis: 40%;
+    overflow-x: auto;
+  }
+
+  .status {
+    padding: 0 2rem;
+  }
+
+  .row {
+    width: 100%;
+    overflow-y: auto; /* Allow horizontal scrolling on smaller screens */
+  }
+
+  .text {
+    top: initial;
+    left: initial;
+    position: static;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .moviebook_right {
+    flex-basis: 100%;
+    height: auto;
+  }
+
+  .detail-left {
+    flex-basis: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .banner-name {
+    font-size: 16px;
+  }
+
+  .seat-info,
+  .ticket-info {
+    padding: 0.5rem;
+  }
+
+  #payment {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button {
+    width: 100%;
+    margin: 0.5rem 0 0 0;
+  }
+}
