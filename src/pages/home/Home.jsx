@@ -50,7 +50,6 @@ const Home = () => {
                     ))}
                 </Carousel>
                 <MovieList />
-                {/* <Toprated/> */}
             </div>
         </>
     );
