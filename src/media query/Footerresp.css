@@ -1,0 +1,33 @@
+
+/* Media Queries for Tablet and Mobile */
+@media only screen and (max-width: 768px) {
+    footer {
+        background-color: snow;
+        border-top-left-radius: 0px;
+        height: 2.9rem;
+        display: flex;
+        padding: 0px;
+    }
+    .footer-row {
+        flex-basis:0%;
+        flex-direction: column;
+    }
+    
+    .icon-resp {
+        padding-left: 2rem; 
+        padding-right: 2rem;
+        padding-top: 0.3rem;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        font-size: 2.3rem;
+        width: 100%;
+        position: absolute;
+    }
+    .footer-col,
+    .hero-logo,
+    .address {
+        display: none;
+    }
+}
+

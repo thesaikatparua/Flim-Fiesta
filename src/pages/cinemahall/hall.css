@@ -1,42 +1,75 @@
-.hall{
+.hall {
     background-color: snow;
-    width:94%;
-    height:12vh;
-    border-radius:20px;
-    margin-left:3rem;
+    width: 94%;
+    height: 12vh;
+    border-radius: 20px;
+    margin-left: 3rem;
     margin-top: 1rem;
     display: flex;
 }
 
-.hall-left{
-   padding:1rem 2rem 1rem 4rem;
-   flex-basis:50%;
- 
+.hall-left {
+    padding: 1rem 2rem 1rem 4rem;
+    flex-basis: 50%;
 }
 
-.hall-left p{
-   font-size:12px;
+.hall-left p {
+    font-size: 12px;
 }
 
-.time-table{
-    flex-basis:30%;
+.time-table {
+    flex-basis: 30%;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    padding:0 2rem;
+    padding: 0 2rem;
 }
 
-.time{
-    padding:0.5rem;
-    border-radius:5px;
-    border:1.8px solid rgb(241, 70, 70);
-    color:black;
+.time {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1.8px solid rgb(241, 70, 70);
+    color: black;
 }
 
-.hall-right{
-    flex-basis:20%;
+.hall-right {
+    flex-basis: 20%;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    padding:2rem 5rem; 
+    padding: 2rem 5rem;
+}
+
+/* Tablet styles (up to 768px) */
+@media only screen and (max-width: 768px) {
+    .hall {
+        flex-wrap: wrap; /* Allow flex items to wrap */
+        width: 90%;
+        margin: 1rem auto; /* Center the element */
+    }
+
+    .hall-left,
+    .time-table,
+    .hall-right {
+        flex-basis: 100%;
+        padding: 1rem; /* Adjust padding for smaller screens */
+        text-align: center; /* Center text content */
+    }
+}
+
+/* Mobile styles (up to 480px) */
+@media only screen and (max-width: 480px) {
+    .hall {
+        width: 100%;
+    }
+
+    .hall-left,
+    .time-table,
+    .hall-right {
+        padding: 0.5rem; /* Further reduce padding for mobile devices */
+    }
+
+    .hall-right {
+        padding: 1rem; /* Adjust padding for .hall-right specifically */
+    }
 }
