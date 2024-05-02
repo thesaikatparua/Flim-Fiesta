@@ -1,0 +1,44 @@
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .home1{
+        display: none;
+    }
+    .home2{
+        display: contents;
+    }
+
+    .posterImage{
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size:contain;
+       width:100%;
+       height:50vh;
+       position: relative;
+    }
+
+    .posterImage__overlay {
+       background: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+       position:absolute;
+       bottom:3rem;
+       padding:3rem 5rem 3rem 2rem;
+    }
+    .posterImage__title {
+        font-weight:500;
+        font-size:1rem;
+        text-align: left;
+    }
+    
+    .posterImage__runtime {
+        font-size: 1rem;
+    }
+    
+    .posterImage__rating {
+        margin-left:1rem;
+    }
+    
+    .poster .carousel.carousel-slider .control-dots{
+    position: absolute;
+    bottom:3rem;
+    }
+
+  }
