@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useQuery } from "react-query";
 import Moviemodal from "./MovieModal";
+import "../../media query/Moviedetailsres.css";
 
 const fetchMovieDetail = async (id) => {
   const response = await fetch(
@@ -54,6 +55,9 @@ const Movie = () => {
             <div className="movie__name">
               {currentMovieDetail ? currentMovieDetail.original_title : ""}
             </div>
+            <div className="movie__name1">
+              <p>{currentMovieDetail ? currentMovieDetail.original_title : ""}</p>
+            </div>
             <div className="movie__tagline">
               {currentMovieDetail ? currentMovieDetail.tagline : ""}
             </div>
@@ -83,6 +87,7 @@ const Movie = () => {
                   </span>
                 ))}
             </div>
+  
             <div className="movie-trailer">
               <Moviemodal/>
             </div>
@@ -90,7 +95,7 @@ const Movie = () => {
 
           <div className="movie__detailRightBottom">
             <div className="synopsisText">Synopsis</div>
-            <div>{currentMovieDetail ? currentMovieDetail.overview : ""}</div>
+            <div className="overview">{currentMovieDetail ? currentMovieDetail.overview : ""}</div>
             <div className="button-container">
               <Link
                 to={`/movie/${id}/booking`}
