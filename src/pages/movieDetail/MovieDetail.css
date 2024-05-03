@@ -64,6 +64,10 @@
     font-size: 3rem;
 }
 
+.movie__name1{
+    display: none;
+}
+
 .movie__voteCount {
     margin-left: 1rem;
 }
