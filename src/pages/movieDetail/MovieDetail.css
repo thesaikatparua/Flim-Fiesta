@@ -79,6 +79,10 @@
     margin-right: 1rem;
 }
 
+.movie__genreshide{
+    display: none;
+}
+
 .movie-trailer{
     width:6rem;
     display: flex;
@@ -89,6 +93,7 @@
     float: right;
     cursor: pointer;
 }
+
 
 .movie__detailRightBottom {
     flex: 0.8;
@@ -168,133 +173,3 @@
     justify-content: center;
 }
 
-/* Add media queries for tablet screens */
-@media only screen and (max-width: 1024px) {
-    .movie__backdrop {
-        width: 42rem;
-        height: 300px; /* Adjusted height for tablets */
-    }
-
-    .movie__detail {
-        width: 90%; /* Adjusted width for tablets */
-        bottom: 200px; /* Adjusted position for tablets */
-    }
-
-    .movie__poster {
-        width: 200px; /* Adjusted width for tablets */
-        box-shadow: rgba(0, 0, 0, 0.86) 0px 10px 20px 3px; /* Adjusted shadow for tablets */
-    }
-
-    .movie__name {
-        font-size: 2rem; /* Adjusted font size for tablets */
-    }
-
-    .movie__genre {
-        margin-right: 0.5rem; /* Reduced margin for tablets */
-    }
-
-    .button-container {
-        width: 15vh; /* Adjusted width for tablets */
-        height: 5vh; /* Adjusted height for tablets */
-        border-radius: 8px; /* Reduced border radius for tablets */
-        margin-top: 1rem; /* Reduced margin top for tablets */
-        margin-bottom: 1rem; /* Reduced margin bottom for tablets */
-    }
-
-    .button-container p {
-        font-size: 16px; /* Adjusted font size for tablets */
-        left: 1rem; /* Adjusted position for tablets */
-        top: 0.6rem; /* Adjusted position for tablets */
-    }
-
-    .synopsisText {
-        font-size: 1.2rem; /* Adjusted font size for tablets */
-        margin-bottom: 0.75rem; /* Reduced margin for tablets */
-    }
-
-    .movie__heading {
-        font-size: 1.8rem; /* Adjusted font size for tablets */
-        margin-top: -10rem; /* Adjusted margin top for tablets */
-    }
-
-    .movie__Button {
-        padding: 0.5rem 1rem; /* Reduced padding for tablets */
-        width: 120px; /* Reduced width for tablets */
-        font-size: 14px; /* Adjusted font size for tablets */
-    }
-
-    .movie__production {
-        width: 95%; /* Adjusted width for tablets */
-        margin-bottom: 3rem; /* Reduced margin bottom for tablets */
-    }
-
-    .movie__productionComapany {
-        width: 150px; /* Adjusted width for tablets */
-        margin: 1.5rem; /* Reduced margin for tablets */
-    }
-}
-
-/* Add media queries for mobile screens */
-@media only screen and (max-width: 767px) {
-    .movie__backdrop {
-        height: 250px; /* Adjusted height for mobile */
-    }
-
-    .movie__detail {
-        width: 100%; /* Adjusted width for mobile */
-        bottom: 150px; /* Adjusted position for mobile */
-    }
-
-    .movie__poster {
-        width: 150px; /* Adjusted width for mobile */
-        box-shadow: rgba(0, 0, 0, 0.86) 0px 6px 12px 2px; /* Adjusted shadow for mobile */
-    }
-
-    .movie__name {
-        font-size: 1.5rem; /* Adjusted font size for mobile */
-    }
-
-    .movie__genre {
-        margin-right: 0.3rem; /* Reduced margin for mobile */
-        padding: 0.3rem; /* Reduced padding for mobile */
-    }
-
-    .button-container {
-        width: 12vh; /* Adjusted width for mobile */
-        height: 4vh; /* Adjusted height for mobile */
-        margin-top: 0.5rem; /* Reduced margin top for mobile */
-        margin-bottom: 0.5rem; /* Reduced margin bottom for mobile */
-    }
-
-    .button-container p {
-        font-size: 12px; /* Adjusted font size for mobile */
-        left: 0.8rem; /* Adjusted position for mobile */
-        top: 0.45rem; /* Adjusted position for mobile */
-    }
-
-    .synopsisText {
-        font-size: 1rem; /* Adjusted font size for mobile */
-        margin-bottom: 0.5rem; /* Reduced margin for mobile */
-    }
-
-    .movie__heading {
-        font-size: 1.5rem; /* Adjusted font size for mobile */
-        margin-top: -7rem; /* Adjusted margin top for mobile */
-    }
-
-    .movie__Button {
-        padding: 0.4rem 0.8rem; /* Reduced padding for mobile */
-        width: 100px; /* Reduced width for mobile */
-        font-size: 12px; /* Adjusted font size for mobile */
-    }
-
-    .movie__production {
-        width: 100%; /* Adjusted width for mobile */
-        margin-bottom: 2rem; /* Reduced margin bottom for mobile */
-    }
-
-    .movie__productionComapany {
-        width: 120px; /* Adjusted width for mobile */
-        margin: 1rem; /* Reduced margin for mobile */
-    }
-}

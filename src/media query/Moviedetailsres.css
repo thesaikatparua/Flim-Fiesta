@@ -1,0 +1,101 @@
+/* @media (max-width: 768px) {
+    .movie__intro {
+        width: 80%;
+        margin-top:4rem;
+        margin-right:5rem;
+    }
+    .movie__backdrop {
+        width:150%;
+        height:300px;
+        object-fit:cover;
+        object-position: center;
+    }
+    .movie__detail {
+        align-items: center;
+        width:95%;
+        display: flex;
+        position: relative;
+        bottom:240px;
+        background-color: red;
+    }
+    
+    .movie__detailLeft {
+        margin-bottom:8rem;
+    }
+    
+    .movie__detailRight {
+        display: flex;
+        flex-direction: column;
+        height:500px;
+        justify-content:space-between ;
+
+    }
+    
+    .movie__detailRightTop{
+        color:snow;
+        background: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+        width:150%;
+        margin-top:2rem;
+        margin-left: -1.8rem;
+        padding-top:5rem;
+        text-shadow: none;
+        height:15rem;
+        padding-left: 1rem;
+        padding-bottom:1rem;
+        margin-bottom:1rem;
+    }
+    .movie__tagline{
+        display: none;
+    }
+    .movie__rating{
+        display: none;
+    }
+    .movie__voteCount{
+        display: none;
+    }
+    .movie__releaseDate{
+        display: none;
+    }
+    
+    .movie__genre{
+        border: 2px solid #fff;
+        border-radius: 20px;
+        margin-right: 1rem;
+        margin-top:-5rem;
+    }
+    
+    .movie-trailer{
+        display: none;
+    }
+
+    .synopsisText {
+        font-size: 1.5rem;
+        font-weight: 600;
+        display: flex;
+        position: relative;
+        align-items: center;
+        
+    }
+    
+    .movie__heading {
+        font-size:2rem;     
+
+    }
+    
+    .movie__production {
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .button-container{
+        width:12vh;
+        height:4vh;
+        border-radius: 10px;
+        background-color: rgba(255, 87, 87, 100);
+        
+        position: relative;
+    }
+} */
+
