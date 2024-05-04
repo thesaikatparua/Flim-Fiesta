@@ -7,6 +7,7 @@ import TabPanel from '@mui/lab/TabPanel';
 import "./hallTop.css"; // Import CSS file for styling
 import HallBottom from "./hallBottom"; // Importing component for TabPanel content
 
+
 export default function LabTabs() {
   // State for managing current tab value
   const [value, setValue] = React.useState('1');
@@ -31,7 +32,7 @@ export default function LabTabs() {
   let dayAfter = dayAfterTomorrow.toLocaleString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' });
 
   return (
-    <Box sx={{ width: '100%', typography: 'body1' }}>
+    <Box sx={{ width: '100%', typography: 'body1' }} className="box-container" >
       {/* Tab context for managing tab state */}
       <TabContext value={value} >
         {/* Tab list for displaying tabs */}
@@ -39,9 +40,9 @@ export default function LabTabs() {
           {/* TabList component */}
           <TabList onChange={handleChange} aria-label="lab API tabs example"  className="tablist">
             {/* Tabs for today, tomorrow, and day after */}
-            <Tab label={`${today}`} value="1" style={{ color:"black"}} />
-            <Tab label={`${tomorrow}`} value="2" style={{ color:"black"}} />
-            <Tab label={`${dayAfter}`} value="3" style={{ color:"black"}}/>
+            <Tab label={`${today}`} value="1" style={{ color:"black"}} id="tab"/>
+            <Tab label={`${tomorrow}`} value="2" style={{ color:"black"}} id="tab" />
+            <Tab label={`${dayAfter}`} value="3" style={{ color:"black"}} id="tab"/>
           </TabList>
         </Box>
         {/* TabPanels for rendering content */}
