@@ -22,7 +22,9 @@
 
     .btn-item{
         width:4rem;
-        font-size:9px;
+        font-size:10px;
+        display: flex;
+        justify-content: center;
     }
     
     .food-item{
