@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items:flex-start;
   }
   
   .movie__name {
@@ -35,44 +35,15 @@
   } */
   
   .movie__genre {
-    background-color: rgba(0, 0, 0, 0.4);
-    color: snow;
+    color: black;
     border-radius: 4px;
     font-size: 14px;
     text-decoration: none;
   }
 
-  /* Tablet Styles */
-@media only screen and (max-width: 1024px) {
-    .banner {
-        padding: 1rem 2rem;/* Reduce padding for tablets */
-    }
-
-    .movie__name {
-        font-size: 20px; /* Adjust font size for tablets */
-    }
-
-    .movie__genre {
-        font-size: 12px; /* Adjust font size for tablets */
-    }
-}
-
-/* Mobile Styles */
-@media only screen and (max-width: 767px) {
-    .banner {
-        padding: 1rem;/* Reduce padding for mobile */
-    }
-
-    .movie__name {
-        font-size: 18px; /* Adjust font size for mobile */
-    }
-
-    .movie__genre {
-        font-size: 10px; /* Adjust font size for mobile */
-    }
-}
   
 
+
   
-  /* Styles for HallTop component can be added here if needed */
+
   

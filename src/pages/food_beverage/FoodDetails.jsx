@@ -4,7 +4,7 @@ import data from "../../data/foodApi";
 import Foodcard from "../../Components/foodcard/Foodcard";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import "./FoodDetails.css";
-
+import "../../media query/Foodres.css";
 
 const FoodDetails = () => {
   const { id } = useParams();
