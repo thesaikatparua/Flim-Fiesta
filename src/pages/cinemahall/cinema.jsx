@@ -4,7 +4,6 @@ import "./cinemaHall.css";
 import HallTop from "./hallTop";
 import { useQuery } from "react-query";
 
-
 const fetchMovieDetail = async (id) => {
   const response = await fetch(
     `https://api.themoviedb.org/3/movie/${id}?api_key=b935b5ca8bde9733059fef48810c9af7&language=en-US`

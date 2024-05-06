@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import "./ticket.css";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import { useQuery } from "react-query";
+import "../../media query/Ticketsummresp.css"
 
 const SeatBooking = () => {
   const [selectedSeats, setSelectedSeats] = useState([]);
