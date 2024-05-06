@@ -40,36 +40,3 @@
     padding: 2rem 5rem;
 }
 
-/* Tablet styles (up to 768px) */
-@media only screen and (max-width: 768px) {
-    .hall {
-        flex-wrap: wrap; /* Allow flex items to wrap */
-        width: 90%;
-        margin: 1rem auto; /* Center the element */
-    }
-
-    .hall-left,
-    .time-table,
-    .hall-right {
-        flex-basis: 100%;
-        padding: 1rem; /* Adjust padding for smaller screens */
-        text-align: center; /* Center text content */
-    }
-}
-
-/* Mobile styles (up to 480px) */
-@media only screen and (max-width: 480px) {
-    .hall {
-        width: 100%;
-    }
-
-    .hall-left,
-    .time-table,
-    .hall-right {
-        padding: 0.5rem; /* Further reduce padding for mobile devices */
-    }
-
-    .hall-right {
-        padding: 1rem; /* Adjust padding for .hall-right specifically */
-    }
-}

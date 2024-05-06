@@ -28,31 +28,4 @@ form {
     padding: 1rem 3rem;
 }
 
-/* Tablet styles (up to 768px) */
-@media only screen and (max-width: 768px) {
-    .search {
-        flex-wrap: wrap; /* Allow flex items to wrap */
-        width: 90%;
-        margin: 1rem auto; /* Center the element */
-        height: auto; /* Allow height to adjust based on content */
-    }
 
-    form,
-    #icon {
-        flex-basis: 100%;
-        padding: 1rem; /* Adjust padding for smaller screens */
-        text-align: center; /* Center content */
-    }
-}
-
-/* Mobile styles (up to 480px) */
-@media only screen and (max-width: 480px) {
-    .search {
-        width: 100%;
-    }
-
-    form,
-    #icon {
-        padding: 0.5rem; /* Further reduce padding for mobile devices */
-    }
-}
