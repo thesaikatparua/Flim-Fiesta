@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import "./Foodcard.css";
+import "../../media query/Foodres.css";
 
 const Food = (props) => {
   const [order, setOrder] = useState(0);

@@ -76,10 +76,18 @@
 
 .row {
   display: flex;
+<<<<<<< HEAD
   width:80%;
   /* background-color: bisque; */
   margin-top: 5rem;
+=======
+  width:85%;
+  /* background-color: bisque; */
+  margin-top:5rem;
+>>>>>>> b581ee0c118a9c957e98b47a389af2ac0433a5d7
 }
+
+
 
 .seat {
   width: 25px;
