@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import "./ticket.css";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import { useQuery } from "react-query";
-import "../../media query/Ticketsummresp.css"
+import "../../media query/Ticketsummresp.css";
 
-const SeatBooking = () => {
-  const [selectedSeats, setSelectedSeats] = useState([]);
+
+const Ticketmobile = () => {
+    const [selectedSeats, setSelectedSeats] = useState([]);
   const [ticketPrice] = useState(100);
 
   const { id } = useParams();
@@ -53,10 +53,9 @@ const SeatBooking = () => {
   const grandTotal = () => {
     return getTotalPrice() + convFee() + gst();
   };
-
   return (
-    <>
-      <div className="ticket-booking">
+      <>
+      <div className="ticketmobile-booking">
         {/* left side seat booking page start  */}
         <div className="seat-booking">
           <div className="movie-container">
@@ -73,10 +72,10 @@ const SeatBooking = () => {
             <div className="screen"></div>
             <div className="row">
               {/* Render seats dynamically */}
-              {Array.from({ length: 30 }, (_, rowIndex) => (
+              {Array.from({ length: 16 }, (_, rowIndex) => (
                 <div key={rowIndex} className="seat-row">
-                  {Array.from({ length: 15 }, (_, seatIndex) => {
-                    const seatNumber = rowIndex * 15 + seatIndex + 1; // Corrected seat numbering calculation
+                  {Array.from({ length: 30 }, (_, seatIndex) => {
+                    const seatNumber = rowIndex * 30 + seatIndex + 1; // Corrected seat numbering calculation
                     const isOccupied = [
                       15, 16, 23, 24, 25, 32, 33, 40, 41,
                     ].includes(seatNumber);
@@ -195,13 +194,12 @@ const SeatBooking = () => {
             style={{ textDecoration: "none", cursor: "pointer" }}
           >
             <button id="proceed" onClick={()=>{"Ticket booking successsful!"}}>Proceed</button>
-            {/* <button id="proceed">Proceed</button> */}
           </Link>
         </div>
         {/* right side booking summary end*/}
       </div>
-    </>
-  );
-};
+      </>
+  )
+}
 
-export default SeatBooking;
+export default Ticketmobile

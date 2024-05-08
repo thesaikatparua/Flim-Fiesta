@@ -10,6 +10,9 @@
   font-weight: 300;
   font-style: normal;
 }
+#ticket{
+  display: none;
+}
 
 /* left side seat booking page start   */
 
@@ -80,8 +83,6 @@
   /* background-color: bisque; */
   margin-top:5rem;
 }
-
-
 
 .seat {
   width: 25px;
