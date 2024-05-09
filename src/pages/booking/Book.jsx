@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import "./Book.css";
 import Ticket from "./ticket";
 import { useQuery } from "react-query";
+import Ticketmobile from "./Ticketmobile";
 
 const fetchMovieDetail = async (id) => {
   const response = await fetch(
@@ -27,6 +28,9 @@ const Book = () => {
       <div className="movie_book">
         <div className="moviebook_left">
           <Ticket ticket={ticket} />
+        </div>
+        <div className="moviebook_mobile">
+        <Ticketmobile ticket={ticket} />
         </div>
       </div>
     </>
