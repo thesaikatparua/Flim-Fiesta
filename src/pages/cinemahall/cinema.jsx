@@ -1,8 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "./cinemaHall.css";
-import HallTop from "./hallTop";
+import HallTop from "./hallTab";
 import { useQuery } from "react-query";
+import Tabmobile from "../../pages/cinemahall/Tabmobile";
 
 const fetchMovieDetail = async (id) => {
   const response = await fetch(
@@ -15,9 +16,11 @@ const fetchMovieDetail = async (id) => {
 const CinemaHall = () => {
   const { id } = useParams();
 
-  const { data: poster, isLoading, isError } = useQuery(["movieDetail", id],
-  () => fetchMovieDetail(id)
-  );
+  const {
+    data: poster,
+    isLoading,
+    isError,
+  } = useQuery(["movieDetail", id], () => fetchMovieDetail(id));
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error fetching data</div>;
@@ -44,6 +47,9 @@ const CinemaHall = () => {
         </div>
         <hr width="100%" size="2"></hr>
         <HallTop />
+        <div className="moviehall_mobile">
+          <Tabmobile />
+        </div>
       </div>
     </>
   );

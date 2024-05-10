@@ -4,8 +4,9 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-import "./hallTop.css"; // Import CSS file for styling
+import "./hallTab.css"; // Import CSS file for styling
 import HallBottom from "./hallBottom"; // Importing component for TabPanel content
+import "../../media query/Cinemahallres.css";
 
 
 export default function LabTabs() {
@@ -32,6 +33,7 @@ export default function LabTabs() {
   let dayAfter = dayAfterTomorrow.toLocaleString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' });
 
   return (
+    <>
     <Box sx={{ width: '100%', typography: 'body1' }} className="box-container" >
       {/* Tab context for managing tab state */}
       <TabContext value={value} >
@@ -51,5 +53,7 @@ export default function LabTabs() {
         <TabPanel value="3"><HallBottom/></TabPanel> {/* Content for day after */}
       </TabContext>
     </Box>
+
+    </>
   );
 }
