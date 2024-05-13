@@ -1,11 +1,7 @@
 /* Home.css */
 
 /* Adjust the position of carousel control arrows */
-.poster .carousel.carousel-slider .control-arrow {
-    top:2rem; 
-    gap:4rem;/* You can adjust this value to position the arrows as needed */
-  }
-  
+
 .poster .carousel.carousel-slider .control-arrow:hover{
     background-color:transparent;
 }
