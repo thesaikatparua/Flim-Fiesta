@@ -1,0 +1,152 @@
+@media only screen and (max-width: 768px) {
+  .banner {
+    display: none;
+  }
+  .box-container {
+    display: none;
+  }
+  .box-mobile {
+    display: contents;
+  }
+
+  /*halltab mobile start*/
+
+  /* Tab Container */
+  .Tabs {
+    width: 90%;
+    height: auto;
+    min-height: 400px;
+    background-color: rgb(255, 0, 0);
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+    color: #e8f0f2;
+    border-radius: 1rem;
+  }
+
+  .react-tabs {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .react-tabs__tab-list {
+    width: 100%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    padding-left: 0px;
+  }
+
+  .react-tabs__tab {
+    width: 80%;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+  }
+
+  .react-tabs__tab--selected {
+    background: rgb(246, 73, 73);
+  }
+
+  .react-tabs__tab--disabled {
+    color: GrayText;
+    cursor: default;
+  }
+
+  .react-tabs__tab:hover {
+    background: rgb(253, 104, 104);
+  }
+
+  .react-tabs__tab:first-child {
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+
+  .react-tabs__tab:last-child {
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .react-tabs__tab-panel {
+    display: none;
+  }
+
+  .react-tabs__tab-panel--selected {
+    display: block;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  /*halltab mobile end*/
+
+  /* hallbottom start */
+  .hallbottom {
+    display: none;
+  }
+  .moviehall_mobile {
+    display: contents;
+  }
+  .hallbottom_mobile {
+    width: 90%;
+  
+  }
+  .search_mobile {
+    display: flex;
+    flex-direction: column;
+    background-color: snow;
+    padding:1rem;
+    margin-right:-2rem;
+    border-radius:10px;
+  }
+
+  input {
+    width:180%;
+    font-size:15px;
+    margin-left: -2rem;
+    padding:1rem;
+  }
+  #icon_mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 3rem;
+  }
+  p{
+    color:black;
+    font-size:15px;
+  }
+
+  /* hallbottom end */
+
+  /* hall card start */
+  .hall {
+    width:100%;
+    height:30vh;
+    margin-left:1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .hall-left{
+    padding: 1rem 4rem 1rem 4rem;
+  }
+  .hall-left h3{
+    font-size:15px;
+    color:black;
+  }
+  .hall-left p{
+  font-size:10px;
+}
+  .time-table{
+    padding: 0 1rem;
+    font-size:15px;
+  }
+  .hall-right{
+    
+  }
+
+  /* hall card end */
+}

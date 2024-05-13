@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Hall from "../../Components/hallcard/hall";
-import "./hallBottom.css";
 import data from "../../data/hallData.json";
 import DirectionsIcon from "@mui/icons-material/Directions";
 import FastfoodIcon from "@mui/icons-material/Fastfood";
 import "../../media query/Cinemahallres.css";
 
-const HallBottom = () => {
+const Hallmobile = () => {
   const [val, setVal] = useState("");
   const [arr, setArr] = useState([]);
   const [location, setLocation] = useState([]);
@@ -34,11 +33,10 @@ const HallBottom = () => {
   const allData = data.filter(
     (item) => !arr.includes(item) && !location.includes(item)
   );
-
   return (
     <>
-      <div className="hallbottom">
-        <div className="search">
+      <div className="hallbottom_mobile">
+        <div className="search_mobile">
           <form onSubmit={submitForm}>
             <input
               type="text"
@@ -48,12 +46,12 @@ const HallBottom = () => {
               onChange={changehandle}
             />
             <button type="submit" value={Search}>
-              Search
+              <p>Search</p>
             </button>
           </form>
-          <div id="icon">
+          <div id="icon_mobile">
             <p>
-              <FastfoodIcon /> Food
+              <FastfoodIcon style={{color:"black"}}/> Food
             </p>
             <p>
               <DirectionsIcon style={{ color: "rgb(241, 70, 70)" }} /> Direction
@@ -101,4 +99,4 @@ const HallBottom = () => {
   );
 };
 
-export default HallBottom;
+export default Hallmobile;

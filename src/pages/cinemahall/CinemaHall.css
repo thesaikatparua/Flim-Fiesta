@@ -41,3 +41,6 @@
     text-decoration: none;
   }
 
+ .moviehall_mobile{
+  display: none;
+ }
