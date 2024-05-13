@@ -55,7 +55,7 @@
 /* Media Queries for Mobile */
 @media only screen and (max-width: 480px) {
     .movie__list {
-        padding: 3rem 1rem 1rem;
+        padding: 1rem 0 1rem;
         
     }
 
