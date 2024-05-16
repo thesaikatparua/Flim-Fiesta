@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
+import "../../media query/Moviedetailsres.css";
 
 const fetchMovieDetail = async (id) => {
   const response = await fetch(
@@ -49,7 +50,7 @@ export default function BasicModal() {
   return (
     <>
       <Button onClick={handleTrailerClick} style={{ color: "snow" }}>
-        <i class="fa-regular fa-circle-play"> </i>
+        <i class="fa-regular fa-circle-play" id="trailer_icon"> </i>
         <p>Trailer</p>
       </Button>
       <Modal
