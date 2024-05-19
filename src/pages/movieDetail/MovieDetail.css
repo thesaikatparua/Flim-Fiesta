@@ -1,172 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap");
 .movie {
     width: 100%;
+    height:180vh;
+    padding-top: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+.movie_intro{
+    width:100%;
+    height:70vh;
+}
+.movie__backdrop{
+    width:90rem;
+    height:35rem;
+    margin-left:3rem;
+    border-radius: 10px;
+}
+.movie_detail{
+    width:100%;
+    height:50vh;
+    /* background-color: red; */
     position: relative;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
 }
-
-.movie__intro {
-    width: 80%;
-    margin-top:4rem;
-}
-
-
-.movie__backdrop {
-    width: 100%;
-    height: 500px;
-    object-fit:cover;
-    object-position: 0 35%;
-    
-}
-/* .overlay {
+.movie_detail_left{
+    width:25%;
+    /* background-color: blue; */
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  } */
-
-.movie__detail {
-    align-items: center;
-    width: 75%;
-    display: flex;
-    position: relative;
-    bottom:240px;
-}
-
-.movie__detailLeft {
-    margin-right: 30px;
+    top:-15rem;
+    left:10rem;
 }
 
 .movie__poster {
-    width:300px;
+    width:20rem;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.86) 0px 22px 40px 6px;
 }
-
-.movie__detailRight {
-    display: flex;
-    flex-direction: column;
-    height:500px;
-    justify-content:space-between ;
+.movie_detail_right{
+    width:75%;
+    /* background-color: aquamarine; */
+    position: absolute;
+    top:-16rem;
+    left:32rem;
+    
 }
-
-.movie__detailRightTop > div{
-    text-shadow: 0px 0px 5px show;
-    /* margin-bottom: .5rem; */
+.movie__detail_right_top{
     color:snow;
 }
-
-.movie__name {
-    font-weight: 600;
-    font-size: 3rem;
+.movie-trailer{
+    margin-left:-1rem;
 }
 
-.movie__name1{
-    display: none;
+.movie__name p{
+    font-weight:800;
+    font-size:3rem;
+    margin-bottom: 1rem;
 }
-
+.movie__tagline{
+    font-size: 1.2rem;
+}
+.movie__rating{
+    font-size: 1rem;
+}
+.movie__runtime{
+    font-size: 1rem;
+}
 .movie__voteCount {
     margin-left: 1rem;
 }
-
-.movie__genres {
-    margin: 1.25rem 0;
+.movie__releaseDate{
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
-.movie__genre {
-    padding: .5rem;
-    border: 2px solid #000;
-    border-radius: 20px;
-    margin-right: 1rem;
-}
-
-.movie__genreshide{
-    display: none;
-}
-
-.movie-trailer{
-    width:6rem;
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
+.movie__genre_list{
+    padding:5px;
     border: 2px solid #fff;
     border-radius: 20px;
-    float: right;
-    cursor: pointer;
+    margin-right: 1rem;
+    color:snow;
 }
 
-
-.movie__detailRightBottom {
-    flex: 0.8;
+.movie__genres .movie__genre span{
+    color:snow;
 }
 
-.button-container{
-    width: 20vh;
-    height: 7vh;
-    border-radius: 10px;
-    background-color: rgba(255, 87, 87, 100);
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    position: relative;
+.movie__detail_right_bottom{
+    margin-top:5rem;
+}
+.synopsisText{
+    font-size:2rem;
+    font-weight:300;
+}
+.overview{
+    width:80%;
+}
+.movie__heading{
+    font-size:2rem;
+    font-weight:800;
+    text-align: center;
 }
 
-.button-container p{
-    color: white;
-    font-size: 14px;
-    position: absolute;
-    left: 1.6rem;
-    top: 0.9rem;
-    font-size: 19px;
-}
-
-.synopsisText {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
-    font-weight: 600;
+.movie__production{
     display: flex;
-    position: relative;
     align-items: center;
-}
-
-/* .movie__links {
-    position: relative;
-    bottom: 120px;
-    display: flex;
-    justify-content: space-between;
-    width: 75%;
-} */
-
-.movie__heading {
-    font-size: 2.2rem;
-    margin-top:-13rem;
-}
-
-.movie__Button {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 0.8rem 2rem;
-    border-radius: 20px;
-    cursor: pointer;
-    width: 150px;
-    color: black;
-    font-weight: bold;
+    font-size:1rem;
+    font-weight:600;
 }
-
-.movie__production {
-    width: 85%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom:5rem;
-}
-
 
 .movie__productionComapany {
-    width: 200px;
+    width:150px;
     margin: 2rem;
 }
 
@@ -175,5 +118,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#movie_trailer_modal{
+    margin-left: 22rem;
+}
+#movie_trailer_modal iframe{
+    width:180%;
+    height:500;
+}
+#play_button{
+    background: transparent;
+    border: none;
 }
 

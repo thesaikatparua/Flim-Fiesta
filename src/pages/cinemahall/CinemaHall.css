@@ -27,20 +27,19 @@
     margin-bottom: 0.5rem;
     font-family: "Poppins", sans-serif;
   }
-  
-  /* Uncomment the lines below if you want to style the tagline */
-  /* .movie__tagline {
-    font-size: 16px;
-    margin-bottom: 0.5rem;
-  } */
-  
+ 
   .movie__genre {
-    color: black;
-    border-radius: 4px;
-    font-size: 14px;
-    text-decoration: none;
+    padding:5px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin-right: 1rem;
+    color:black;
   }
 
  .moviehall_mobile{
   display: none;
+ }
+
+ hr{
+  margin:0;
  }

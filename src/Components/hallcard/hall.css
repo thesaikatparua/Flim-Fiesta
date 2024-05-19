@@ -13,6 +13,9 @@
     flex-basis: 50%;
 }
 
+.hall-left h3{
+    font-size:1.2rem;
+}
 .hall-left p {
     font-size: 12px;
 }

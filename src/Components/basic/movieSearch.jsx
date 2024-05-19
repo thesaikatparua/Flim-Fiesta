@@ -3,6 +3,8 @@ import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import { useAutocomplete } from '@mui/base/useAutocomplete';
 import { styled } from '@mui/system';
+import "../../media query/Navbarres.css";
+
 
 const fetchPopularMovies = async () => {
     const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=b935b5ca8bde9733059fef48810c9af7&language=en-US");
@@ -61,10 +63,10 @@ export default function UseAutocomplete() {
   return (
     <div>
       <div {...getRootProps()} >
-        <Input placeholder="Search here..." {...getInputProps()} style={{ width:"25rem", background:"snow"}} />
+        <Input className="movie_search_input" placeholder="Search here..." {...getInputProps()}  style={{width:"25rem"}}/>
       </div>
       {groupedOptions.length > 0 ? (
-        <Listbox {...getListboxProps()} style={{ width:"25rem"}}>
+        <Listbox {...getListboxProps()} id="search_listbox" style={{width:"25rem"}}>
           {groupedOptions.map((option, index) => (
             <li {...getOptionProps({ option, index })}>
               <Link to={`/movie/${option.id}`} style={{ textDecoration: "none", color: "black" }}>

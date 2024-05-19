@@ -23,24 +23,23 @@ const Movie = () => {
     isError,
   } = useQuery(["movieDetail", id], () => fetchMovieDetail(id));
 
-
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error fetching data</div>;
 
   return (
-    <div className="movie">
-      <div className="movie__intro">
-        <img
-          className="movie__backdrop"
-          src={`https://image.tmdb.org/t/p/original${
-            currentMovieDetail ? currentMovieDetail.backdrop_path : ""
-          }`}
-          alt="movie poster"
-        />
-      </div>
-      <div className="movie__detail">
-        <div className="movie__detailLeft">
-          <div className="movie__posterBox">
+    <>
+      <div className="movie">
+        <div className="movie_intro">
+          <img
+            className="movie__backdrop"
+            src={`https://image.tmdb.org/t/p/original${
+              currentMovieDetail ? currentMovieDetail.backdrop_path : ""
+            }`}
+            alt="movie poster"
+          />
+        </div>
+        <div className="movie_detail">
+          <div className="movie_detail_left">
             <img
               className="movie__poster"
               src={`https://image.tmdb.org/t/p/original${
@@ -49,83 +48,83 @@ const Movie = () => {
               alt="movie poster"
             />
           </div>
-        </div>
-        <div className="movie__detailRight">
-          <div className="movie__detailRightTop">
-            <div className="movie__name">
-              {currentMovieDetail ? currentMovieDetail.original_title : ""}
-            </div>
-            <div className="movie__name1">
-              <p>{currentMovieDetail ? currentMovieDetail.original_title : ""}</p>
-            </div>
-            <div className="movie__tagline">
-              {currentMovieDetail ? currentMovieDetail.tagline : ""}
-            </div>
-            <div className="movie__rating">
-              {currentMovieDetail ? currentMovieDetail.vote_average : ""}{" "}
-              <i className="fas fa-star" />
-              <span className="movie__voteCount">
+          <div className="movie_detail_right">
+            <div className="movie__detail_right_top">
+              <div className="movie-trailer">
+                <Moviemodal />
+              </div>
+              <div className="movie__name">
+                <p>
+                  {currentMovieDetail ? currentMovieDetail.original_title : ""}
+                </p>
+              </div>
+              <div className="movie__tagline">
+                {currentMovieDetail ? currentMovieDetail.tagline : ""}
+              </div>
+              <div className="movie__rating">
+                {currentMovieDetail ? currentMovieDetail.vote_average : ""}{" "}
+                <i className="fas fa-star" />
+                <span className="movie__voteCount">
+                  {currentMovieDetail
+                    ? "(" + currentMovieDetail.vote_count + ") votes"
+                    : ""}
+                </span>
+              </div>
+              <div className="movie__runtime">
+                {currentMovieDetail ? currentMovieDetail.runtime + " mins" : ""}
+              </div>
+              <div className="movie__releaseDate">
                 {currentMovieDetail
-                  ? "(" + currentMovieDetail.vote_count + ") votes"
+                  ? "Release date: " + currentMovieDetail.release_date
                   : ""}
-              </span>
+              </div>
+              <div className="movie__genres">
+                {currentMovieDetail &&
+                  currentMovieDetail.genres &&
+                  currentMovieDetail.genres.map((genre) => (
+                    <span
+                      key={genre.id}
+                      className="movie__genre_list"
+                    >
+                      {genre.name}
+                    </span>
+                  ))}
+              </div>
             </div>
-            <div className="movie__runtime">
-              {currentMovieDetail ? currentMovieDetail.runtime + " mins" : ""}
-            </div>
-            <div className="movie__releaseDate">
-              {currentMovieDetail
-                ? "Release date: " + currentMovieDetail.release_date
-                : ""}
-            </div>
-            <div className="movie__genres">
-              {currentMovieDetail &&
-                currentMovieDetail.genres &&
-                currentMovieDetail.genres.map((genre) => (
-                  <span key={genre.id} className="movie__genre">
-                    {genre.name}
-                  </span>
-                ))}
-            </div>
-  
-            <div className="movie-trailer">
-              <Moviemodal/>
-            </div>
-          </div>
-
-          <div className="movie__detailRightBottom">
-            <div className="synopsisText">Synopsis</div>
-            <div className="overview">{currentMovieDetail ? currentMovieDetail.overview : ""}</div>
-            <div className="button-container">
+            <div className="movie__detail_right_bottom">
+              <div className="synopsisText">Synopsis</div>
+              <div className="overview">
+                {currentMovieDetail ? currentMovieDetail.overview : ""}
+              </div>
               <Link
                 to={`/movie/${id}/booking`}
                 target="_blank"
                 style={{ textDecoration: "none", cursor: "pointer" }}
               >
-                <p>Book tickets</p>
+                <button>Book tickets</button>
               </Link>
             </div>
           </div>
         </div>
+        <div className="movie__heading">Production companies</div>
+        <div className="movie__production">
+          {currentMovieDetail &&
+            currentMovieDetail.production_companies &&
+            currentMovieDetail.production_companies.map((company) =>
+              company.logo_path ? (
+                <span key={company.id} className="productionCompanyImage">
+                  <img
+                    className="movie__productionComapany"
+                    src={`https://image.tmdb.org/t/p/original${company.logo_path}`}
+                    alt="production name:"
+                  />
+                  <span>{company.name}</span>
+                </span>
+              ) : null
+            )}
+        </div>
       </div>
-      <div className="movie__heading">Production companies</div>
-      <div className="movie__production">
-        {currentMovieDetail &&
-          currentMovieDetail.production_companies &&
-          currentMovieDetail.production_companies.map((company) =>
-            company.logo_path ? (
-              <span key={company.id} className="productionCompanyImage">
-                <img
-                  className="movie__productionComapany"
-                  src={`https://image.tmdb.org/t/p/original${company.logo_path}`}
-                  alt="production name:"
-                />
-                <span>{company.name}</span>
-              </span>
-            ) : null
-          )}
-      </div>
-    </div>
+    </>
   );
 };
 

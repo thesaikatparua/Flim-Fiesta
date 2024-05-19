@@ -47,7 +47,7 @@ const HallBottom = () => {
               value={val}
               onChange={changehandle}
             />
-            <button type="submit" value={Search}>
+            <button type="submit" value={Search} id="search_cinemahal">
               Search
             </button>
           </form>

@@ -71,12 +71,37 @@ const SeatBooking = () => {
 
           <div className="container">
             <div className="screen"></div>
-            <div className="row">
+            <div className="row1">
               {/* Render seats dynamically */}
-              {Array.from({ length: 30 }, (_, rowIndex) => (
+              {Array.from({ length:15}, (_, rowIndex) => (
                 <div key={rowIndex} className="seat-row">
-                  {Array.from({ length: 15 }, (_, seatIndex) => {
-                    const seatNumber = rowIndex * 15 + seatIndex + 1; // Corrected seat numbering calculation
+                  {Array.from({ length:30 }, (_, seatIndex) => {
+                    const seatNumber = rowIndex *30 + seatIndex + 1; // Corrected seat numbering calculation
+                    const isOccupied = [
+                      15, 16, 23, 24, 25, 32, 33, 40, 41,
+                    ].includes(seatNumber);
+                    const isSelected = selectedSeats.includes(seatNumber);
+                    return (
+                      <div
+                        key={seatIndex}
+                        className={`seat ${isOccupied ? "occupied" : ""} ${
+                          isSelected ? "selected" : ""
+                        }`}
+                        onClick={() =>
+                          !isOccupied && handleSeatClick(seatNumber)
+                        }
+                      ></div>
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
+            <div className="row2">
+              {/* Render seats dynamically */}
+              {Array.from({ length:30}, (_, rowIndex) => (
+                <div key={rowIndex} className="seat-row">
+                  {Array.from({ length:15 }, (_, seatIndex) => {
+                    const seatNumber = rowIndex *15 + seatIndex + 1; // Corrected seat numbering calculation
                     const isOccupied = [
                       15, 16, 23, 24, 25, 32, 33, 40, 41,
                     ].includes(seatNumber);
