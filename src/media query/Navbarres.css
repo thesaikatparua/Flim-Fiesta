@@ -1,0 +1,22 @@
+@media only screen and (max-width: 768px){
+    .location_dropdown{
+        margin-left:0;
+    }
+       
+    #search_box {
+        padding: 0px;
+        border: 0;
+        background:none;
+       
+    }
+    #movie_search_input{
+        background:none;
+    }
+
+    #login_button{
+        margin-left: 0;
+        width:20rem;
+        height:3rem;
+      }
+   
+}

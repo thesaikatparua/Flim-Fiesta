@@ -5,7 +5,7 @@ footer{
     background:rgb(51, 51, 56);
     color:#fff;
     padding:3rem 5rem 0;
-    height:45vh;
+    height:50vh;
     border-top-left-radius: 125px;
     font-size:13px;
     line-height:20px;
@@ -28,6 +28,7 @@ footer{
 .footer-col p{
   font-size:1rem;
   color:snow;
+  width:8rem;
 }
 .hero-logo{
   width:150px;
@@ -35,10 +36,16 @@ footer{
   margin-bottom: 20px;
   
 }
+
+.address h4{
+  font-size: 1rem;
+}
+
 .footer-col h2{
   width:fit-content;
   margin-bottom:30px;
   position:relative;
+  font-size:1.5rem;
   
 }
 

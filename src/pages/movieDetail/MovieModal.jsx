@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import "./MovieModal.css";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
-import Button from "@mui/material/Button";
-import Modal from "@mui/material/Modal";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import "./MovieModal.css";
+import "../../media query/Moviedetailsres.css";
 
 const fetchMovieDetail = async (id) => {
   const response = await fetch(
@@ -13,17 +14,18 @@ const fetchMovieDetail = async (id) => {
   return data;
 };
 
-export default function BasicModal() {
+function MovieModal() {
   const { id } = useParams();
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [show, setShow] = useState(false);
   const [trailerUrl, setTrailerUrl] = useState("");
+
   const {
     data: currentMovieDetail,
     isLoading,
     isError,
   } = useQuery(["movieDetail", id], () => fetchMovieDetail(id));
 
-  const handleTrailerClick = () => {
+  const handleShow = () => {
     if (
       currentMovieDetail &&
       currentMovieDetail.videos &&
@@ -34,46 +36,41 @@ export default function BasicModal() {
       );
       if (officialTrailer) {
         setTrailerUrl(`https://www.youtube.com/embed/${officialTrailer.key}`);
-        setIsModalOpen(true);
+        setShow(true);
       }
     }
   };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
+  const handleClose = () => {
+    setShow(false);
     setTrailerUrl("");
   };
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error fetching data</div>;
+
   return (
     <>
-      <Button onClick={handleTrailerClick} style={{ color: "snow" }}>
-        <i class="fa-regular fa-circle-play"> </i>
-        <p>Trailer</p>
+      <Button onClick={handleShow} id="play_button">
+        <i className="fa-regular fa-circle-play"> </i>
       </Button>
-      <Modal
-        open={isModalOpen}
-        onClose={handleCloseModal}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={handleCloseModal}>
-              &times;
-            </span>
+
+      <Modal show={show} onHide={handleClose} id="movie_trailer_modal">
+          {trailerUrl ? (
             <iframe
               title="trailer"
-              width="800"
+              width="180%"
               height="500"
               src={trailerUrl}
               frameBorder="0"
               allowFullScreen
             ></iframe>
-          </div>
-        </div>
+          ) : (
+            "Trailer not available"
+          )}
       </Modal>
     </>
   );
 }
+
+export default MovieModal;

@@ -33,18 +33,10 @@ const Tabmobile = () => {
           <Hallmobile/>
           </TabPanel>
           <TabPanel>
-            <h3>Tab 2 working!</h3>
-            <p>
-              This is the content of Tab 2. You can add whatever content you
-              want to displace inside the &lt;TabPanel&gt; &lt;/TabPanel&gt;
-            </p>
+          <Hallmobile/>
           </TabPanel>
           <TabPanel>
-            <h3>Tab 3 is working!</h3>
-            <p>
-              This is the content of Tab 3. You can add whatever content you
-              want to displace inside the &lt;TabPanel&gt; &lt;/TabPanel&gt;
-            </p>
+          <Hallmobile/>
           </TabPanel>
         </Tabs>
       </div>

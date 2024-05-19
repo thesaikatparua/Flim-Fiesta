@@ -1,141 +1,86 @@
  @media (max-width: 768px) {
     .movie {
         width: 100%;
-        position: relative;
-        display: flex;
-        flex-direction:column;
-        align-items: center;
-        height:120vh;
+        height:180vh;
+        padding-top:6rem;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
     }
-    
-    .movie__intro {
-        width: 80%;
-        margin-top:4rem;
-    }
-    
-    
-    .movie__backdrop {
-        width: 100%;
-        height:200px;
-        object-fit:cover;
-        object-position: 0 20%;
-    }
-    /* .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-      } */
-    
-    .movie__detail {
-        align-items: center;
-        width: 75%;
-        display: flex;
-        position: relative;
-    }
-    
-    .movie__detailLeft {
-        margin-bottom:6rem;
-    }
-    
-    .movie__poster {
-        width:100px;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0.86) 0px 22px 40px 6px;
-    }
-    
-    .movie__detailRight {
-        display: flex;
-        flex-direction: column;
-        height:500px;
-        justify-content:space-between ;
-    }
-    
-    .movie__detailRightTop{
-        text-shadow: 0px 0px 5px show;
-        color:snow;
-        font-size:12px;
-        width:120%;
-        background-color: rgba(0, 0, 0, 0.5);
-        margin-top:9rem;
-        margin-left: -1.8rem;
-        padding-left: 1rem;
-    }
-    
-    .movie__name{
-      display: none;
-    }
-
-    .movie__name1{
-        display: contents;
-    }
-    
-    .movie__voteCount {
-        margin-left: 1rem;
-    }
-    
-    .movie__genre {
+    .movie_intro{
        display: none;
     }
-    
-    .movie__genreshide{
-        display: none;
-    }
-    
-    .movie-trailer{
-      display: none;
-    }
-    
-    
-    .movie__detailRightBottom {
-      margin-top:2rem;
-    }
-    
-    .button-container{
-        width:17vh;
-        height: 7vh;
-        border-radius: 10px;
-        background-color: rgba(255, 87, 87, 100);
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-        position: relative;
-    }
-    
-    .button-container p{
-        color: white;
-        font-size:15px;
+    .movie_detail_left{
         position: absolute;
-        left: 1.3rem;
-        top:1rem;
+        top:-1rem;
+        left:1rem;
     }
     
-    .synopsisText {
-        font-size: 1.5rem;
-        font-weight: 600;
+    .movie_detail_right{
+        position: absolute;
+        top:30rem;
+        left:1rem;
+        
+    }
+    .movie__detail_right_top{
+        color:black;
+    }
+    .movie-trailer{
+        margin-left:-15rem;
+    }
+    
+    .movie__name p{
+        font-weight:800;
+        font-size:1.5rem;
+        margin-bottom: 1rem;
+    }
+    .movie__genres{
+        width:150%;
+    }
+    .movie__genre_list{
+        padding:2px;
+        border: 2px solid #000;
+        color:black;
+    }
+    
+    
+    .movie__detail_right_bottom{
+        margin-top: 2rem;
+    }
+    .movie__detail_right_bottom button{
+        width:8rem;
+    }
+    .synopsisText{
+        display: none;
+    }
+    .overview{
+       display: none;
+    }
+    .movie__heading{
+        font-size:1.5rem;
+        margin-top:35rem;
+    }
+    
+    .movie__production{
         display: flex;
-        position: relative;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        font-size:10px;
+        font-weight:600;
     }
     
-    /* .movie__links {
-        position: relative;
-        bottom: 120px;
-        display: flex;
-        justify-content: space-between;
-        width: 75%;
-    } */
-    
-    .movie__heading {
-        display: none;
+    .movie__productionComapany {
+        width:100px;
+        margin: 2rem;
     }
-    
-
-    .movie__production {
-        display: none;
+    .modal-content{
+        width:10rem;
+        height:10rem;
     }
-    
+    #movie_trailer_modal{
+        margin-top: 20rem;
+        margin-left:2rem;
+    }
     
  
 } 

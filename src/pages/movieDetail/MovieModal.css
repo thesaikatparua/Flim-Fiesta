@@ -1,9 +1,16 @@
-.modal{
-    position: relative;
+.modal-content{
+    width:100%;
+    height:500;
+}
+#movie_trailer_modal{
+    margin-left: 22rem;
 }
 
-.modal-content{
-    position: absolute;
-    top:8rem;
-    left:23rem;
+#play_button{
+    background: transparent;
+    border: none;
 }
+#play_button i{
+    font-size:2rem;
+}
+

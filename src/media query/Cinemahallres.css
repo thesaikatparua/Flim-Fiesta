@@ -52,7 +52,7 @@
   }
 
   .react-tabs__tab--disabled {
-    color: GrayText;
+    color: Gray;
     cursor: default;
   }
 
@@ -120,6 +120,8 @@
     font-size:15px;
   }
 
+
+
   /* hallbottom end */
 
   /* hall card start */
@@ -142,11 +144,12 @@
 }
   .time-table{
     padding: 0 1rem;
-    font-size:15px;
+    font-size:12px;
   }
   .hall-right{
-    
+    margin-top: -1rem;
   }
+  
 
   /* hall card end */
 }

@@ -1,49 +1,59 @@
-import React, { useContext } from "react";
-import logo from "../../assets/logo.png";
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 import "./Header.css";
-import { FaSearch } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import Location from "../location/Location";
+import Logo from "../../assets/logo.png";
 import Search from "./movieSearch";
-import {Name} from "../form/Registration";
-import Signup from "../form/Registration";
+import "../../media query/Navbarres.css";
+import { Link } from 'react-router-dom';
 
 const Header = (props) => {
 
   return (
     <>
-      <nav>
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <div className="logo">
-            <img
-              src={logo}
-              alt="logo"
-              style={{ width: "8rem", height: "3rem" }}
-            />
-          </div>
-        </Link>
-        <Link style={{ textDecoration: "none" }}>
-          <div className="search-bar">
-            <FaSearch
-              id="search-icon"
-              style={{ marginRight: "1rem", color: "black" }}
-            />
-            <p style={{ color: "black" }}><Search/></p>
-           
-          </div>
-        </Link>
-          <Link style={{ textDecoration: "none" }}>
-            <div className="location">
-              <Location style={{color:"black"}} />
-            </div>
-          </Link>
-
-        <Link to="/login" style={{ textDecoration: "none" }}>
-          <div className="login">
-            <button>Sign In</button>
-          </div>
-        </Link>
-      </nav>
+    {['sm'].map((expand) => (
+        <Navbar key={expand} expand={expand} className="bg-body-tertiary" id="nav">
+          <Container fluid>
+            <Navbar.Brand href="#"><Link to="/"><img src={Logo} alt="logo" style={{ width: "8rem", height: "3rem" }}/></Link></Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                <Link to="/"><img src={Logo} alt="logo" style={{ width: "8rem", height: "3rem" }}/></Link>
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-start " id="menu">
+                <Nav.Link href="#action1"><Link to="/" style={{textDecoration:"none", color:"black"}}>Home</Link></Nav.Link>
+                  <NavDropdown
+                    className="location_dropdown"
+                    title="Location"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#action3">Kolkata</NavDropdown.Item>
+                    <NavDropdown.Item href="#action3">Delhi</NavDropdown.Item>
+                    <NavDropdown.Item href="#action3">Bengaluru</NavDropdown.Item>
+                    <NavDropdown.Item href="#action3">Mumbai</NavDropdown.Item>
+                    <NavDropdown.Item href="#action3">Hyderabad</NavDropdown.Item>
+                  </NavDropdown>
+                </Nav>
+                <Form  id="search_box">
+                  <Search/>
+                </Form>
+                <Button variant="outline-danger"  id="login_button">Sign In</Button>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
+      ))}
     </>
   );
 };
