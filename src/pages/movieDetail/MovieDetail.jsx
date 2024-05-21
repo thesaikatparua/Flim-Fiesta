@@ -100,6 +100,14 @@ const Movie = () => {
                 to={`/movie/${id}/booking`}
                 target="_blank"
                 style={{ textDecoration: "none", cursor: "pointer" }}
+                id="book_ticket"
+              >
+                <button>Book tickets</button>
+              </Link>
+              <Link
+                to={`/movie/${id}/booking`}
+                style={{ textDecoration: "none", cursor: "pointer" }}
+                id="book_ticket_mobile"
               >
                 <button>Book tickets</button>
               </Link>

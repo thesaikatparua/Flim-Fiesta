@@ -1,21 +1,39 @@
 import React, {createContext, useState} from 'react';
 import "./Registration.css";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
+import Swal from 'sweetalert2';
+import "../../media query/Formres.css";
 
 
 export const Name=createContext()
 
-const Registration = () => {
+const Registration = (props) => {
   const[signVal, setSignVal]=useState("");
   const[subVal, SetSubVal]=useState(false);
   const change = (e)=>{
     setSignVal(e.target.value);
   }
 
+  const navigate = useNavigate();
+
   const submitForm=(e)=>{
     e.preventDefault();
     SetSubVal(true);
+    props.handleSign(signVal)
+    navigate("/")
+    Swal.fire({
+      title: 'This is a Official Alert message',
+      text: 'Welcome to FilmFiesta!!!',
+      confirmButtonText: 'OK'
+    });
 }
+// const seatBook=()=>{
+//   Swal.fire({
+//     title: 'This is a Official Alert message',
+//     text: 'Please book your seat',
+//     confirmButtonText: 'OK'
+//   });
+// }
 
 
   return (
@@ -27,13 +45,10 @@ const Registration = () => {
             <input type="text"  value={signVal} onChange={change} placeholder=' UserName' required/>
             <input type="text" placeholder=' Email' required/>
             <input type="text" placeholder=" Password" required/>
-            <span style={{fontSize:"12px"}}><p>Forget password! <Link  style={{textDecoration:"none"}}>Click here</Link></p></span>
-            <button type="submit" >Submit</button>
+            <span style={{fontSize:"12px"}} id="registration_span"><p>Forget password! <Link  style={{textDecoration:"none"}}>Click here</Link></p></span>
+            <button type="submit">Submit</button>
             <br/>
-            {
-                subVal &&   <h1>this is {signVal}</h1>
-            }
-            <scan>If you already register,<Link to="/login" style={{textDecoration:"none"}}>Login here</Link></scan>
+            <span id="registration_span"><p>If you already register,<Link to="/login" style={{textDecoration:"none"}} >Login here</Link></p></span>
         </form> 
        </div>
        {/* </Name.Provider> */}

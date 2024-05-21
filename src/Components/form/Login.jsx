@@ -1,21 +1,33 @@
 import React, {createContext, useState} from 'react';
 import "./Registration.css";
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate} from 'react-router-dom';
+import Swal from 'sweetalert2';
+import "../../media query/Formres.css";
 
 export const Name=createContext()
 
-const Login = () => {
+const Login = (props) => {
   const[signVal, setSignVal]=useState("");
   const[subVal, SetSubVal]=useState(false);
   const change = (e)=>{
     setSignVal(e.target.value);
   }
 
+  const navigate = useNavigate();
+
   const submitForm=(e)=>{
     e.preventDefault();
     SetSubVal(true);
+    navigate("/")
+    props.handleSign(signVal)
+    Swal.fire({
+      title: 'This is a Official Alert message',
+      text: 'Successfully Login',
+      confirmButtonText: 'OK'
+    });
 }
+
+
 
 
   return (
@@ -30,10 +42,7 @@ const Login = () => {
             <span style={{fontSize:"12px"}}><p>Forget password! <Link  style={{textDecoration:"none"}}>Click here</Link></p></span>
             <button type="submit" >Submit</button>
             <br/>
-            {
-                subVal &&   <h1>this is {signVal}</h1>
-            }
-            <scan>If you not register,<Link to="/signup"  style={{textDecoration:"none"}}>Click here</Link></scan>
+            <scan><p>If you not register,<Link to="/signup"  style={{textDecoration:"none"}} >Click here</Link></p></scan>
         </form> 
        </div>
        {/* </Name.Provider> */}

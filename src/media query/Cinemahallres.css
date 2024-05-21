@@ -1,4 +1,9 @@
 @media only screen and (max-width: 768px) {
+  .cinema-hall {
+   width:100%;
+   height:265vh;
+  }
+  
   .banner {
     display: none;
   }
@@ -152,4 +157,8 @@
   
 
   /* hall card end */
+
+ .App{
+  margin-top:4rem;
+ }
 }

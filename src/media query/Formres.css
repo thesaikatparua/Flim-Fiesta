@@ -1,0 +1,38 @@
+@media only screen and (max-width: 768px) {
+    .signup{
+        width:100%;
+        height:95vh;
+        padding-top:8rem;
+    }
+    
+    .registration{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width:20rem;;
+        height:25rem;
+        background-color: rgb(249, 62, 62);
+        padding:3rem 5rem;
+        margin-left:1rem;
+        border-radius: 10px;
+    }
+    .registration p{
+        
+        width: 200%;
+        margin-left: -2rem;
+    }
+    
+    .registration input{
+        color:black;
+        border-radius: 10px;
+        margin-top: 1rem;
+        border: 1px solid black;
+        padding: 0.5rem 1rem;;
+        background-color: snow;
+        margin-left:5px;
+    }
+    
+    .signup h2{
+      margin-left:8rem;
+    }
+}
