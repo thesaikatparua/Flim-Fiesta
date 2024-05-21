@@ -4,6 +4,7 @@ import "./ticket.css";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import { useQuery } from "react-query";
 import "../../media query/Ticketsummresp.css"
+import Swal from 'sweetalert2';
 
 const SeatBooking = () => {
   const [selectedSeats, setSelectedSeats] = useState([]);
@@ -53,6 +54,21 @@ const SeatBooking = () => {
   const grandTotal = () => {
     return getTotalPrice() + convFee() + gst();
   };
+
+  const bookTicket = () => {
+    Swal.fire({
+      title: 'This is a Official Alert message',
+      text: 'Thank for ticket booking',
+      confirmButtonText: 'OK'
+    });
+  };
+  const seatBook=()=>{
+    Swal.fire({
+      title: 'This is a Official Alert message',
+      text: 'Please book your seat',
+      confirmButtonText: 'OK'
+    });
+  }
 
   return (
     <>
@@ -216,10 +232,10 @@ const SeatBooking = () => {
           </div>
 
           <Link
-            to={`/movie/${id}/booking/food`}
+            to={selectedSeats.length?`/movie/${id}/booking/food`: `/movie/${id}/booking/ticket`}
             style={{ textDecoration: "none", cursor: "pointer" }}
           >
-            <button id="proceed" onClick={()=>{"Ticket booking successsful!"}}>Proceed</button>
+            <button id="proceed" onClick={selectedSeats.length?bookTicket:seatBook}>Proceed</button>
             {/* <button id="proceed">Proceed</button> */}
           </Link>
         </div>

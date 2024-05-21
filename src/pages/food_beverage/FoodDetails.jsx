@@ -5,6 +5,7 @@ import Foodcard from "../../Components/foodcard/Foodcard";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import "./FoodDetails.css";
 import "../../media query/Foodres.css";
+import Swal from 'sweetalert2';
 
 const FoodDetails = () => {
   const { id } = useParams();
@@ -42,6 +43,21 @@ const FoodDetails = () => {
   const grandTotal = () => {
     return  gst();
   };
+
+  const itemSelect=()=>{
+    Swal.fire({
+      title: 'This is a Official Alert message',
+      text: 'Enjoy Your Day!!!',
+      confirmButtonText: 'OK'
+    });
+  }
+  const itemNotSelect=()=>{
+    Swal.fire({
+      title: 'This is a Official Alert message',
+      text: 'You are not add any item',
+      confirmButtonText: 'OK'
+    });
+  }
 
   return (
     <div className="food-container">
@@ -129,9 +145,14 @@ const FoodDetails = () => {
               </p>
             </div>
           </div>
-
-          <Link  to={`/movie/${id}/booking/food`} style={{ textDecoration: "none", cursor: "pointer" }} ><button id="proceed">Proceed</button></Link>
-
+          {
+            getTotalPrice()
+            ?
+            <Link  to={`/movie/:id/booking/food`} style={{ textDecoration: "none", cursor: "pointer" }} ><button id="proceed" onClick={itemSelect}>Proceed</button></Link>
+            :
+            <Link  to={`/movie/:id/booking/food`} style={{ textDecoration: "none", cursor: "pointer" }} ><button id="proceed" onClick={itemNotSelect}>Proceed</button></Link>
+            }
+         
       </div>
     </div>
   );

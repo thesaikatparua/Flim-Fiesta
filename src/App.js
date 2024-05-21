@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Components/basic/Header';
 import Home from './pages/home/Home';
 import Footer from './Components/footer/Footer';
@@ -17,20 +17,26 @@ import Signin from "./Components/form/Login";
 const queryClient = new QueryClient();
 
 const App = () => {
+  const[user,setUser]=useState("");
 
   const url = window.location.href;
 
   const bookingUrlFlag = url.includes('booking');
   const isSearchPage = url.includes('/search');
+   const signVal=(data)=>{
+    console.log(data)
+    setUser(data)
+   }
+   
 
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
-        {!bookingUrlFlag && !isSearchPage ? <Header /> : null}
+        {!bookingUrlFlag && !isSearchPage ? <Header name={user} /> : null}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<Signup/>} />
-          <Route path="/login" element={<Signin/>} />
+          <Route path="/signup" element={<Signup handleSign={signVal}/>} />
+          <Route path="/login" element={<Signin handleSign={signVal}/>} />
           <Route path="movie/:id" element={<MovieDetail />} />
           <Route path="movies/:type" element={<MovieList />} />
           <Route path="/search" element={<Search />} />

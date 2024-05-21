@@ -81,6 +81,15 @@
         margin-top: 20rem;
         margin-left:2rem;
     }
+
+    #book_ticket{
+        display:none;
+    }
+
+    #book_ticket_mobile{
+        display:contents;
+    }
+    
     
  
 } 

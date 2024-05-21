@@ -1,7 +1,11 @@
 @media only screen and (max-width:768px) {
-  
+  .movie_book{
+    width:100%;
+    height:200vh;
+  }
 .ticket-booking {
     flex-direction: column;
+    padding-top:6rem;
   }
   #ticket{
     display: none;
