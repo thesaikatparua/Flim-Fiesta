@@ -13,26 +13,33 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Signup from "./Components/form/Registration"
 import Signin from "./Components/form/Login";
+import Profile from "./pages/profile/Profile"
 
 const queryClient = new QueryClient();
 
 const App = () => {
   const[user,setUser]=useState("");
+  const[usermail,setUsermail]=useState("");
+  const[userLogout,setUserLogout]=useState("");
 
   const url = window.location.href;
 
   const bookingUrlFlag = url.includes('booking');
   const isSearchPage = url.includes('/search');
-   const signVal=(data)=>{
-    console.log(data)
-    setUser(data)
+
+   const signVal=(data1, data2, data3)=>{
+    setUser(data1)
+    setUsermail(data2)
+    setUserLogout(data3)
    }
+
    
 
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
-        {!bookingUrlFlag && !isSearchPage ? <Header name={user} /> : null}
+        {!bookingUrlFlag && !isSearchPage ? <Header name={user} logout={userLogout} /> : null}
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup handleSign={signVal}/>} />
@@ -44,6 +51,7 @@ const App = () => {
           <Route path="/movie/:id/booking/ticket" element={<Booking />} />
           <Route path="/movie/:id/booking/food"  element={<Food/>} />
           <Route path="/offer" element={<Offer />} />
+          <Route path="/profile" element={<Profile name={user} mail={usermail} handleSign={signVal}/>} />
           <Route path="/*" element={<h1>error page</h1>} />
    
         </Routes>
