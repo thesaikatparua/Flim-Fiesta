@@ -9,9 +9,16 @@ export const Name=createContext()
 
 const Registration = (props) => {
   const[signVal, setSignVal]=useState("");
+  const[mailVal, setMailVal]=useState("");
+
   const[subVal, SetSubVal]=useState(false);
   const change = (e)=>{
     setSignVal(e.target.value);
+   
+  }
+
+  const changeEmail=(e)=>{
+    setMailVal(e.target.value)
   }
 
   const navigate = useNavigate();
@@ -19,7 +26,7 @@ const Registration = (props) => {
   const submitForm=(e)=>{
     e.preventDefault();
     SetSubVal(true);
-    props.handleSign(signVal)
+    props.handleSign(signVal,mailVal)
     navigate("/")
     Swal.fire({
       title: 'This is a Official Alert message',
@@ -43,7 +50,7 @@ const Registration = (props) => {
        <h2>Sign Up</h2>
        <form className="registration" onSubmit={submitForm}>
             <input type="text"  value={signVal} onChange={change} placeholder=' UserName' required/>
-            <input type="text" placeholder=' Email' required/>
+            <input type="text"  value={mailVal} onChange={changeEmail}placeholder=' Email' required/>
             <input type="text" placeholder=" Password" required/>
             <span style={{fontSize:"12px"}} id="registration_span"><p>Forget password! <Link  style={{textDecoration:"none"}}>Click here</Link></p></span>
             <button type="submit">Submit</button>

@@ -11,7 +11,7 @@ import Search from "./movieSearch";
 import "../../media query/Navbarres.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Swal from 'sweetalert2';
+
 
 const Header = (props) => {
   const navigate = useNavigate();
@@ -26,14 +26,13 @@ const Header = (props) => {
   }, [props.name]);
 
   const logOut = () => {
-    setName("Sign In");
-    navigate("/");
-    Swal.fire({
-      title: 'This is a Official Alert message',
-      text: 'Oops!!!, Logout. Please Login again.',
-      confirmButtonText: 'OK'
-    });
+    setName(`Hi, ${props.name}`);
+    navigate("/profile");
   };
+
+  
+
+
 
   return (
     <>
