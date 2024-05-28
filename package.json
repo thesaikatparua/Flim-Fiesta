@@ -1,5 +1,6 @@
 {
   "name": "my_app",
+  "homepage": "https://thesaikatparua.github.io/Flim-Fiesta/",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
