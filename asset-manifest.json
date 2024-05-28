@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.847963df.css",
+    "main.js": "/static/js/main.d1244db0.js",
+    "static/media/sandwich2.jpg": "/static/media/sandwich2.c98cab0941c651433260.jpg",
+    "static/media/drink2.jpg": "/static/media/drink2.37e02e6d59502f4557d0.jpg",
+    "static/media/sandwich1.jpg": "/static/media/sandwich1.95a2d03d405ff4a81b5d.jpg",
+    "static/media/popcorn1.jpg": "/static/media/popcorn1.09c3f117bd8396c4dad1.jpg",
+    "static/media/burgur1.jpg": "/static/media/burgur1.8a5f5f6a99fb70935abd.jpg",
+    "static/media/drink1.jpg": "/static/media/drink1.3c7454a5e6522f85d4a0.jpg",
+    "static/media/burgur2.jpg": "/static/media/burgur2.1c5d54c065e131a7b4ad.jpg",
+    "static/media/popcorn2.jpg": "/static/media/popcorn2.0c66acf882655aaef1a8.jpg",
+    "static/media/offer10.jpg": "/static/media/offer10.b8b69881fcc59d08021d.jpg",
+    "static/media/food3.jpg": "/static/media/food3.6fae73e29e5f3b5a7a73.jpg",
+    "static/media/offer3.jpg": "/static/media/offer3.498c5c4d208453bd48ae.jpg",
+    "static/media/food2.jpg": "/static/media/food2.42ad40b7b376f1c4dcd5.jpg",
+    "static/media/offer5.jpg": "/static/media/offer5.c6a9ad89d58ea38019ec.jpg",
+    "static/media/offer4.jpg": "/static/media/offer4.f5cd59e1978da00fa8a3.jpg",
+    "static/media/food1.jpg": "/static/media/food1.4a850ec46f8975711a6f.jpg",
+    "static/media/offer9.jpg": "/static/media/offer9.2a55d11631a5bb786557.jpg",
+    "static/media/offer1.jpg": "/static/media/offer1.aa5de2d9138e08152f46.jpg",
+    "static/media/user.png": "/static/media/user.a6cd56a6cc292fa7d169.png",
+    "static/media/logo.png": "/static/media/logo.126072b5856964477e3c.png",
+    "static/media/movie_user.png": "/static/media/movie_user.0192b50f9a778a4abfd4.png",
+    "index.html": "/index.html",
+    "main.847963df.css.map": "/static/css/main.847963df.css.map",
+    "main.d1244db0.js.map": "/static/js/main.d1244db0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.847963df.css",
+    "static/js/main.d1244db0.js"
+  ]
+}
