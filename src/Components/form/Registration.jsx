@@ -11,7 +11,6 @@ const Registration = (props) => {
   const[signVal, setSignVal]=useState("");
   const[mailVal, setMailVal]=useState("");
 
-  const[subVal, SetSubVal]=useState(false);
   const change = (e)=>{
     setSignVal(e.target.value);
    
@@ -25,7 +24,6 @@ const Registration = (props) => {
 
   const submitForm=(e)=>{
     e.preventDefault();
-    SetSubVal(true);
     props.handleSign(signVal,mailVal)
     navigate("/")
     Swal.fire({

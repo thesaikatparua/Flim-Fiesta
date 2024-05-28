@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import data from "../../data/foodApi";
 import Foodcard from "../../Components/foodcard/Foodcard";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
@@ -8,7 +8,7 @@ import "../../media query/Foodres.css";
 import Swal from 'sweetalert2';
 
 const FoodDetails = () => {
-  const { id } = useParams();
+
   const [isData, setIsData] = useState(data);
   const [order, setOrder] = useState({});
 
