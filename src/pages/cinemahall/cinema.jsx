@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-// import "./CinemaHall.css";
+import "./Cinemahall.css";
 import HallTop from "./hallTab";
 import { useQuery } from "react-query";
 import Tabmobile from "../../pages/cinemahall/Tabmobile";
