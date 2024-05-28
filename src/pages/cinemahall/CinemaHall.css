@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+/* cinemaHall.css */
+
+.cinema-hall {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .banner {
+    width: 100%;
+    height: 25vh;
+    background-color: snow;
+    padding: 1rem 5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+  }
+  
+  .movie__name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-family: "Poppins", sans-serif;
+  }
+ 
+  .movie__genre {
+    padding:5px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin-right: 1rem;
+    color:black;
+  }
+
+ .moviehall_mobile{
+  display: none;
+ }
+
+ hr{
+  margin:0;
+ }
