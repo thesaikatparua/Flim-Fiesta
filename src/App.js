@@ -11,6 +11,7 @@ import Food from "./pages/food_beverage/FoodDetails";
 import Offer from "./pages/offer/Offer";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
+
 import Signup from "./Components/form/Registration"
 import Signin from "./Components/form/Login";
 import Profile from "./pages/profile/Profile"
@@ -37,7 +38,7 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Router>
+     <Router basename={process.env.PUBLIC_URL}>
         {!bookingUrlFlag && !isSearchPage ? <Header name={user} logout={userLogout} /> : null}
 
         <Routes>
